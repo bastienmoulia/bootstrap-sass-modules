@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap-sass-modules",
+  "version": "1.0.0",
+  "description": "Bootstrap with SASS Modules",
+  "sass": "scss/bootstrap.scss",
+  "style": "dist/bootstrap.css",
+  "scripts": {
+    "start": "npm run css-compile",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/"
+  },
+  "author": "Bastien Moulia",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.76.0"
+  }
+}
