@@ -1,3 +1,4 @@
+@use "functions";
 @use "variables";
 @use "variables-dark";
 @use "maps";
@@ -40,8 +41,8 @@
     --#{ variables.$prefix}#{$color}-border-subtle: #{$value};
   }
 
-  --#{ variables.$prefix}white-rgb: #{to-rgb(variables.$white)};
-  --#{ variables.$prefix}black-rgb: #{to-rgb(variables.$black)};
+  --#{ variables.$prefix}white-rgb: #{functions.to-rgb(variables.$white)};
+  --#{ variables.$prefix}black-rgb: #{functions.to-rgb(variables.$black)};
 
   // Fonts
 
@@ -74,40 +75,46 @@
   }
 
   --#{ variables.$prefix}body-color: #{variables.$body-color};
-  --#{ variables.$prefix}body-color-rgb: #{to-rgb(variables.$body-color)};
+  --#{ variables.$prefix}body-color-rgb: #{functions.to-rgb(
+      variables.$body-color
+    )};
   --#{ variables.$prefix}body-bg: #{variables.$body-bg};
-  --#{ variables.$prefix}body-bg-rgb: #{to-rgb(variables.$body-bg)};
+  --#{ variables.$prefix}body-bg-rgb: #{functions.to-rgb(variables.$body-bg)};
 
   --#{ variables.$prefix}emphasis-color: #{variables.$body-emphasis-color};
-  --#{ variables.$prefix}emphasis-color-rgb: #{to-rgb(
+  --#{ variables.$prefix}emphasis-color-rgb: #{functions.to-rgb(
       variables.$body-emphasis-color
     )};
 
   --#{ variables.$prefix}secondary-color: #{variables.$body-secondary-color};
-  --#{ variables.$prefix}secondary-color-rgb: #{to-rgb(
+  --#{ variables.$prefix}secondary-color-rgb: #{functions.to-rgb(
       variables.$body-secondary-color
     )};
   --#{ variables.$prefix}secondary-bg: #{variables.$body-secondary-bg};
-  --#{ variables.$prefix}secondary-bg-rgb: #{to-rgb(
+  --#{ variables.$prefix}secondary-bg-rgb: #{functions.to-rgb(
       variables.$body-secondary-bg
     )};
 
   --#{ variables.$prefix}tertiary-color: #{variables.$body-tertiary-color};
-  --#{ variables.$prefix}tertiary-color-rgb: #{to-rgb(
+  --#{ variables.$prefix}tertiary-color-rgb: #{functions.to-rgb(
       variables.$body-tertiary-color
     )};
   --#{ variables.$prefix}tertiary-bg: #{variables.$body-tertiary-bg};
-  --#{ variables.$prefix}tertiary-bg-rgb: #{to-rgb(variables.$body-tertiary-bg)};
+  --#{ variables.$prefix}tertiary-bg-rgb: #{functions.to-rgb(
+      variables.$body-tertiary-bg
+    )};
   // scss-docs-end root-body-variables
 
   --#{ variables.$prefix}heading-color: #{variables.$headings-color};
 
   --#{ variables.$prefix}link-color: #{variables.$link-color};
-  --#{ variables.$prefix}link-color-rgb: #{to-rgb(variables.$link-color)};
+  --#{ variables.$prefix}link-color-rgb: #{functions.to-rgb(
+      variables.$link-color
+    )};
   --#{ variables.$prefix}link-decoration: #{variables.$link-decoration};
 
   --#{ variables.$prefix}link-hover-color: #{variables.$link-hover-color};
-  --#{ variables.$prefix}link-hover-color-rgb: #{to-rgb(
+  --#{ variables.$prefix}link-hover-color-rgb: #{functions.to-rgb(
       variables.$link-hover-color
     )};
 
@@ -162,32 +169,34 @@
 
     // scss-docs-start root-dark-mode-vars
     --#{ variables.$prefix}body-color: #{variables-dark.$body-color-dark};
-    --#{ variables.$prefix}body-color-rgb: #{to-rgb(
+    --#{ variables.$prefix}body-color-rgb: #{functions.to-rgb(
         variables-dark.$body-color-dark
       )};
     --#{ variables.$prefix}body-bg: #{variables-dark.$body-bg-dark};
-    --#{ variables.$prefix}body-bg-rgb: #{to-rgb(variables-dark.$body-bg-dark)};
+    --#{ variables.$prefix}body-bg-rgb: #{functions.to-rgb(
+        variables-dark.$body-bg-dark
+      )};
 
     --#{ variables.$prefix}emphasis-color: #{variables-dark.$body-emphasis-color-dark};
-    --#{ variables.$prefix}emphasis-color-rgb: #{to-rgb(
+    --#{ variables.$prefix}emphasis-color-rgb: #{functions.to-rgb(
         variables-dark.$body-emphasis-color-dark
       )};
 
     --#{ variables.$prefix}secondary-color: #{variables-dark.$body-secondary-color-dark};
-    --#{ variables.$prefix}secondary-color-rgb: #{to-rgb(
+    --#{ variables.$prefix}secondary-color-rgb: #{functions.to-rgb(
         variables-dark.$body-secondary-color-dark
       )};
     --#{ variables.$prefix}secondary-bg: #{variables-dark.$body-secondary-bg-dark};
-    --#{ variables.$prefix}secondary-bg-rgb: #{to-rgb(
+    --#{ variables.$prefix}secondary-bg-rgb: #{functions.to-rgb(
         variables-dark.$body-secondary-bg-dark
       )};
 
     --#{ variables.$prefix}tertiary-color: #{variables-dark.$body-tertiary-color-dark};
-    --#{ variables.$prefix}tertiary-color-rgb: #{to-rgb(
+    --#{ variables.$prefix}tertiary-color-rgb: #{functions.to-rgb(
         variables-dark.$body-tertiary-color-dark
       )};
     --#{ variables.$prefix}tertiary-bg: #{variables-dark.$body-tertiary-bg-dark};
-    --#{ variables.$prefix}tertiary-bg-rgb: #{to-rgb(
+    --#{ variables.$prefix}tertiary-bg-rgb: #{functions.to-rgb(
         variables-dark.$body-tertiary-bg-dark
       )};
 
@@ -207,10 +216,10 @@
 
     --#{ variables.$prefix}link-color: #{variables-dark.$link-color-dark};
     --#{ variables.$prefix}link-hover-color: #{variables-dark.$link-hover-color-dark};
-    --#{ variables.$prefix}link-color-rgb: #{to-rgb(
+    --#{ variables.$prefix}link-color-rgb: #{functions.to-rgb(
         variables-dark.$link-color-dark
       )};
-    --#{ variables.$prefix}link-hover-color-rgb: #{to-rgb(
+    --#{ variables.$prefix}link-hover-color-rgb: #{functions.to-rgb(
         variables-dark.$link-hover-color-dark
       )};
 

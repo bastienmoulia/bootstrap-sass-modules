@@ -80,7 +80,7 @@
   --#{variables.$prefix}btn-hover-color: #{$hover-color};
   --#{variables.$prefix}btn-hover-bg: #{$hover-background};
   --#{variables.$prefix}btn-hover-border-color: #{$hover-border};
-  --#{variables.$prefix}btn-focus-shadow-rgb: #{to-rgb(
+  --#{variables.$prefix}btn-focus-shadow-rgb: #{functions.to-rgb(
       mix($color, $border, 15%)
     )};
   --#{variables.$prefix}btn-active-color: #{$active-color};
@@ -122,7 +122,7 @@
   --#{variables.$prefix}btn-hover-color: #{$color-hover};
   --#{variables.$prefix}btn-hover-bg: #{$active-background};
   --#{variables.$prefix}btn-hover-border-color: #{$active-border};
-  --#{variables.$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+  --#{variables.$prefix}btn-focus-shadow-rgb: #{functions.to-rgb($color)};
   --#{variables.$prefix}btn-active-color: #{$active-color};
   --#{variables.$prefix}btn-active-bg: #{$active-background};
   --#{variables.$prefix}btn-active-border-color: #{$active-border};

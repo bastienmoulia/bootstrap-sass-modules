@@ -1,3 +1,4 @@
+@use "../functions";
 @use "../variables";
 @use "../vendor/rfs";
 //
@@ -15,8 +16,11 @@
 // For use with horizontal and inline forms, when you need the label (or legend)
 // text to align with the form controls.
 .col-form-label {
-  padding-top: add(variables.$input-padding-y, variables.$input-border-width);
-  padding-bottom: add(
+  padding-top: functions.add(
+    variables.$input-padding-y,
+    variables.$input-border-width
+  );
+  padding-bottom: functions.add(
     variables.$input-padding-y,
     variables.$input-border-width
   );
@@ -29,11 +33,11 @@
 }
 
 .col-form-label-lg {
-  padding-top: add(
+  padding-top: functions.add(
     variables.$input-padding-y-lg,
     variables.$input-border-width
   );
-  padding-bottom: add(
+  padding-bottom: functions.add(
     variables.$input-padding-y-lg,
     variables.$input-border-width
   );
@@ -41,11 +45,11 @@
 }
 
 .col-form-label-sm {
-  padding-top: add(
+  padding-top: functions.add(
     variables.$input-padding-y-sm,
     variables.$input-border-width
   );
-  padding-bottom: add(
+  padding-bottom: functions.add(
     variables.$input-padding-y-sm,
     variables.$input-border-width
   );

@@ -111,9 +111,9 @@ $utilities-colors: $theme-colors-rgb !default;
 $utilities-text: map-merge(
   $utilities-colors,
   (
-    "black": to-rgb(variables.$black),
-    "white": to-rgb(variables.$white),
-    "body": to-rgb(variables.$body-color),
+    "black": functions.to-rgb(variables.$black),
+    "white": functions.to-rgb(variables.$white),
+    "body": functions.to-rgb(variables.$body-color),
   )
 ) !default;
 $utilities-text-colors: functions.map-loop(
@@ -140,9 +140,9 @@ $utilities-text-emphasis-colors: (
 $utilities-bg: map-merge(
   $utilities-colors,
   (
-    "black": to-rgb(variables.$black),
-    "white": to-rgb(variables.$white),
-    "body": to-rgb(variables.$body-bg),
+    "black": functions.to-rgb(variables.$black),
+    "white": functions.to-rgb(variables.$white),
+    "body": functions.to-rgb(variables.$body-bg),
   )
 ) !default;
 $utilities-bg-colors: functions.map-loop(
@@ -169,8 +169,8 @@ $utilities-bg-subtle: (
 $utilities-border: map-merge(
   $utilities-colors,
   (
-    "black": to-rgb(variables.$black),
-    "white": to-rgb(variables.$white),
+    "black": functions.to-rgb(variables.$black),
+    "white": functions.to-rgb(variables.$white),
   )
 ) !default;
 $utilities-border-colors: functions.map-loop(
@@ -203,7 +203,7 @@ $utilities-links-underline: functions.map-loop(
 
 $negative-spacers: if(
   variables.$enable-negative-margins,
-  negativify-map(variables.$spacers),
+  functions.negativify-map(variables.$spacers),
   null
 ) !default;
 

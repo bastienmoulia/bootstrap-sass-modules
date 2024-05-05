@@ -32,12 +32,12 @@
           functions.tint-color($value, variables.$link-shade-percentage)
         );
         color: RGBA(
-            #{to-rgb($hover-color)},
+            #{functions.to-rgb($hover-color)},
             var(--#{variables.$prefix}link-opacity, 1)
           )
           if(variables.$enable-important-utilities, !important, null);
         text-decoration-color: RGBA(
-            to-rgb($hover-color),
+            functions.to-rgb($hover-color),
             var(--#{variables.$prefix}link-underline-opacity, 1)
           )
           if(variables.$enable-important-utilities, !important, null);
