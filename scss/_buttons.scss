@@ -161,18 +161,9 @@
         $value,
         $hover-background:
         functions.shade-color($value, variables.$btn-hover-bg-shade-amount),
-        $hover-border:
-          functions.shade-color(
-            $value,
-            variables.$btn-hover-border-shade-amount
-          ),
-        $active-background:
-          functions.shade-color($value, variables.$btn-active-bg-shade-amount),
-        $active-border:
-          functions.shade-color(
-            $value,
-            variables.$btn-active-border-shade-amount
-          )
+        $hover-border: functions.shade-color($value, variables.$btn-hover-border-shade-amount),
+        $active-background: functions.shade-color($value, variables.$btn-active-bg-shade-amount),
+        $active-border: functions.shade-color($value, variables.$btn-active-border-shade-amount)
       );
     } @else if $color == "dark" {
       @include buttons.button-variant(
@@ -180,12 +171,9 @@
         $value,
         $hover-background:
         functions.tint-color($value, variables.$btn-hover-bg-tint-amount),
-        $hover-border:
-          functions.tint-color($value, variables.$btn-hover-border-tint-amount),
-        $active-background:
-          functions.tint-color($value, variables.$btn-active-bg-tint-amount),
-        $active-border:
-          functions.tint-color($value, variables.$btn-active-border-tint-amount)
+        $hover-border: functions.tint-color($value, variables.$btn-hover-border-tint-amount),
+        $active-background: functions.tint-color($value, variables.$btn-active-bg-tint-amount),
+        $active-border: functions.tint-color($value, variables.$btn-active-border-tint-amount)
       );
     } @else {
       @include buttons.button-variant($value, $value);

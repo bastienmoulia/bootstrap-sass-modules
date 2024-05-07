@@ -149,20 +149,10 @@
 }
 
 .carousel-control-prev-icon {
-  background-image:
-    escape-svg.escape-svg(
-      variables.$carousel-control-prev-icon-bg
-    )
-    #{"/*rtl:" + escape-svg.escape-svg(variables.$carousel-control-next-icon-bg) +
-    "*/"};
+  background-image: escape-svg.escape-svg(variables.$carousel-control-prev-icon-bg) #{"/*rtl:" + escape-svg.escape-svg(variables.$carousel-control-next-icon-bg) + "*/"};
 }
 .carousel-control-next-icon {
-  background-image:
-    escape-svg.escape-svg(
-      variables.$carousel-control-next-icon-bg
-    )
-    #{"/*rtl:" + escape-svg.escape-svg(variables.$carousel-control-prev-icon-bg) +
-    "*/"};
+  background-image: escape-svg.escape-svg(variables.$carousel-control-next-icon-bg) #{"/*rtl:" + escape-svg.escape-svg(variables.$carousel-control-prev-icon-bg) + "*/"};
 }
 
 // Optional indicator pips/controls

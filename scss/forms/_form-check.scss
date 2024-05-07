@@ -39,8 +39,7 @@
   flex-shrink: 0;
   width: variables.$form-check-input-width;
   height: variables.$form-check-input-width;
-  margin-top:
-    (variables.$line-height-base - variables.$form-check-input-width) * .5; // line-height minus check height
+  margin-top: (variables.$line-height-base - variables.$form-check-input-width) * .5; // line-height minus check height
   vertical-align: top;
   appearance: none;
   background-color: var(--#{variables.$prefix}form-check-bg);

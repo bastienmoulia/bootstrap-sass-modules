@@ -97,8 +97,7 @@
     margin-left: variables.$pagination-margin-start;
   }
 
-  @if variables.$pagination-margin-start ==
-    calc(#{variables.$pagination-border-width} * -1)
+  @if variables.$pagination-margin-start == calc(#{variables.$pagination-border-width} * -1)
   {
     &:first-child {
       .page-link {

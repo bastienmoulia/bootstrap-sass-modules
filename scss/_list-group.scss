@@ -119,10 +119,7 @@
     border-top-width: 0;
 
     &.active {
-      margin-top:
-        calc(
-          -1 * var(--#{variables.$prefix}list-group-border-width)
-        ); // stylelint-disable-line function-disallowed-list
+      margin-top: calc(-1 * var(--#{variables.$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
       border-top-width: var(--#{variables.$prefix}list-group-border-width);
     }
   }
@@ -166,10 +163,7 @@
           border-left-width: 0;
 
           &.active {
-            margin-left:
-              calc(
-                -1 * var(--#{variables.$prefix}list-group-border-width)
-              ); // stylelint-disable-line function-disallowed-list
+            margin-left: calc(-1 * var(--#{variables.$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
             border-left-width:
               var(
                 --#{variables.$prefix}list-group-border-width

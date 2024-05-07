@@ -91,8 +91,7 @@
 
 .input-group-lg > .form-select,
 .input-group-sm > .form-select {
-  padding-right:
-    variables.$form-select-padding-x + variables.$form-select-indicator-padding;
+  padding-right: variables.$form-select-padding-x + variables.$form-select-indicator-padding;
 }
 
 // Rounded corners
@@ -129,10 +128,7 @@
   }
 
   > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
-    margin-left:
-      calc(
-        #{variables.$input-border-width} * -1
-      ); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(#{variables.$input-border-width} * -1); // stylelint-disable-line function-disallowed-list
     @include border-radius.border-start-radius(0);
   }
 

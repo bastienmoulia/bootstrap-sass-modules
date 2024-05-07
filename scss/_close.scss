@@ -11,9 +11,7 @@
 .btn-close {
   // scss-docs-start close-css-vars
   --#{variables.$prefix}btn-close-color: #{variables.$btn-close-color};
-  --#{variables.$prefix}btn-close-bg: #{escape-svg.escape-svg(
-    variables.$btn-close-bg
-  )};
+  --#{variables.$prefix}btn-close-bg: #{escape-svg.escape-svg(variables.$btn-close-bg)};
   --#{variables.$prefix}btn-close-opacity: #{variables.$btn-close-opacity};
   --#{variables.$prefix}btn-close-hover-opacity: #{variables.$btn-close-hover-opacity};
   --#{variables.$prefix}btn-close-focus-shadow: #{variables.$btn-close-focus-shadow};

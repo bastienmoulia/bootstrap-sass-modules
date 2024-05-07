@@ -1,5 +1,5 @@
 @use "mixins/banner" with (
-  $bsFile: "Grid"
+  $bs-file: "Grid"
 );
 
 $include-column-box-sizing: true !default;

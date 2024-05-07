@@ -68,9 +68,7 @@
 }
 
 .table-group-divider {
-  border-top:
-    calc(#{variables.$table-border-width} * 2) solid
-    variables.$table-group-separator-color; // stylelint-disable-line function-disallowed-list
+  border-top: calc(#{variables.$table-border-width} * 2) solid variables.$table-group-separator-color; // stylelint-disable-line function-disallowed-list
 }
 
 //
@@ -88,9 +86,7 @@
 .table-sm {
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    padding:
-      variables.$table-cell-padding-y-sm
-      variables.$table-cell-padding-x-sm;
+    padding: variables.$table-cell-padding-y-sm variables.$table-cell-padding-x-sm;
   }
 }
 
@@ -132,24 +128,16 @@
 // For rows
 .table-striped {
   > tbody > tr:nth-of-type(#{variables.$table-striped-order}) > * {
-    --#{variables.$prefix}table-color-type: var(
-      --#{variables.$prefix}table-striped-color
-    );
-    --#{variables.$prefix}table-bg-type: var(
-      --#{variables.$prefix}table-striped-bg
-    );
+    --#{variables.$prefix}table-color-type: var(--#{variables.$prefix}table-striped-color);
+    --#{variables.$prefix}table-bg-type: var(--#{variables.$prefix}table-striped-bg);
   }
 }
 
 // For columns
 .table-striped-columns {
   > :not(caption) > tr > :nth-child(#{variables.$table-striped-columns-order}) {
-    --#{variables.$prefix}table-color-type: var(
-      --#{variables.$prefix}table-striped-color
-    );
-    --#{variables.$prefix}table-bg-type: var(
-      --#{variables.$prefix}table-striped-bg
-    );
+    --#{variables.$prefix}table-color-type: var(--#{variables.$prefix}table-striped-color);
+    --#{variables.$prefix}table-bg-type: var(--#{variables.$prefix}table-striped-bg);
   }
 }
 
