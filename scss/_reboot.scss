@@ -234,17 +234,11 @@ sup {
 // Links
 
 a {
-  color:
-    rgba(
-      var(--#{variables.$prefix}link-color-rgb),
-      var(--#{variables.$prefix}link-opacity, 1)
-    );
+  color: rgba(var(--#{variables.$prefix}link-color-rgb), var(--#{variables.$prefix}link-opacity, 1));
   text-decoration: variables.$link-decoration;
 
   &:hover {
-    --#{variables.$prefix}link-color-rgb: var(
-      --#{variables.$prefix}link-hover-color-rgb
-    );
+    --#{variables.$prefix}link-color-rgb: var(--#{variables.$prefix}link-hover-color-rgb);
     text-decoration: variables.$link-hover-decoration;
   }
 }
@@ -269,9 +263,7 @@ code,
 kbd,
 samp {
   font-family: variables.$font-family-code;
-  @include rfs.font-size(
-    1em
-  ); // Correct the odd `em` font sizing in all browsers.
+  @include rfs.font-size(1em); // Correct the odd `em` font sizing in all browsers.
 }
 
 // 1. Remove browser default top margin
@@ -435,9 +427,7 @@ select {
 // Remove the dropdown arrow only from text type inputs built with datalists in Chrome.
 // See https://stackoverflow.com/a/54997118
 
-[list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not(
-[type="week"]
-):not([type="time"])::-webkit-calendar-picker-indicator {
+[list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not([type="week"]):not([type="time"])::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 

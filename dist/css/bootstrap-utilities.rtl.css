@@ -109,9 +109,7 @@
   --bs-border-radius-lg: 0.5rem;
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-xxl: 2rem;
-  --bs-border-radius-2xl: var(
-    --bs-border-radius-xxl
-  );
+  --bs-border-radius-2xl: var(--bs-border-radius-xxl);
   --bs-border-radius-pill: 50rem;
   --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -1720,27 +1718,27 @@
 }
 
 .fs-1 {
-  font-size: rfs-fluid-value(2.5rem) !important;
+  font-size: calc(1.375rem + 1.5vw) !important;
 }
 
 .fs-2 {
-  font-size: rfs-fluid-value(2rem) !important;
+  font-size: calc(1.325rem + 0.9vw) !important;
 }
 
 .fs-3 {
-  font-size: rfs-fluid-value(1.75rem) !important;
+  font-size: calc(1.3rem + 0.6vw) !important;
 }
 
 .fs-4 {
-  font-size: rfs-fluid-value(1.5rem) !important;
+  font-size: calc(1.275rem + 0.3vw) !important;
 }
 
 .fs-5 {
-  font-size: rfs-fluid-value(1.25rem) !important;
+  font-size: 1.25rem !important;
 }
 
 .fs-6 {
-  font-size: rfs-fluid-value(1rem) !important;
+  font-size: 1rem !important;
 }
 
 .fst-italic {
@@ -5345,22 +5343,16 @@
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: rfs-value(2.5rem) !important;
+    font-size: 2.5rem !important;
   }
   .fs-2 {
-    font-size: rfs-value(2rem) !important;
+    font-size: 2rem !important;
   }
   .fs-3 {
-    font-size: rfs-value(1.75rem) !important;
+    font-size: 1.75rem !important;
   }
   .fs-4 {
-    font-size: rfs-value(1.5rem) !important;
-  }
-  .fs-5 {
-    font-size: rfs-value(1.25rem) !important;
-  }
-  .fs-6 {
-    font-size: rfs-value(1rem) !important;
+    font-size: 1.5rem !important;
   }
 }
 @media print {

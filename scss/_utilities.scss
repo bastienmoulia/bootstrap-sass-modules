@@ -704,10 +704,7 @@ $utilities: map-merge(
         maps.$utilities-links-underline,
         (
           null:
-          rgba(
-            var(--#{variables.$prefix}link-color-rgb),
-            var(--#{variables.$prefix}link-underline-opacity, 1)
-          ),
+          rgba(var(--#{variables.$prefix}link-color-rgb), var(--#{variables.$prefix}link-underline-opacity, 1)),
         )
       ),
     ),

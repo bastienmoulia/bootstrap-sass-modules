@@ -37,25 +37,10 @@
   > :not(caption) > * > * {
     padding: variables.$table-cell-padding-y variables.$table-cell-padding-x;
     // Following the precept of cascades: https://codepen.io/miriamsuzanne/full/vYNgodb
-    color:
-      var(
-        --#{variables.$prefix}table-color-state,
-        var(
-          --#{variables.$prefix}table-color-type,
-          var(--#{variables.$prefix}table-color)
-        )
-      );
+    color: var(--#{variables.$prefix}table-color-state, var(--#{variables.$prefix}table-color-type, var(--#{variables.$prefix}table-color)));
     background-color: var(--#{variables.$prefix}table-bg);
     border-bottom-width: variables.$table-border-width;
-    box-shadow:
-      inset 0 0 0 9999px
-      var(
-        --#{variables.$prefix}table-bg-state,
-        var(
-          --#{variables.$prefix}table-bg-type,
-          var(--#{variables.$prefix}table-accent-bg)
-        )
-      );
+    box-shadow: inset 0 0 0 9999px var(--#{variables.$prefix}table-bg-state, var(--#{variables.$prefix}table-bg-type, var(--#{variables.$prefix}table-accent-bg)));
   }
 
   > tbody {
@@ -146,12 +131,8 @@
 // The `.table-active` class can be added to highlight rows or cells
 
 .table-active {
-  --#{variables.$prefix}table-color-state: var(
-    --#{variables.$prefix}table-active-color
-  );
-  --#{variables.$prefix}table-bg-state: var(
-    --#{variables.$prefix}table-active-bg
-  );
+  --#{variables.$prefix}table-color-state: var(--#{variables.$prefix}table-active-color);
+  --#{variables.$prefix}table-bg-state: var(--#{variables.$prefix}table-active-bg);
 }
 
 // Hover effect
@@ -160,12 +141,8 @@
 
 .table-hover {
   > tbody > tr:hover > * {
-    --#{variables.$prefix}table-color-state: var(
-      --#{variables.$prefix}table-hover-color
-    );
-    --#{variables.$prefix}table-bg-state: var(
-      --#{variables.$prefix}table-hover-bg
-    );
+    --#{variables.$prefix}table-color-state: var(--#{variables.$prefix}table-hover-color);
+    --#{variables.$prefix}table-bg-state: var(--#{variables.$prefix}table-hover-bg);
   }
 }
 

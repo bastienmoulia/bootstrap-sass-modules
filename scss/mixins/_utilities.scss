@@ -1,4 +1,5 @@
 @use "../variables";
+@use "../vendor/rfs";
 
 // Utility generator
 // Used to generate utilities & print utilities
@@ -52,12 +53,12 @@
     @if map-get($utility, rfs) {
       // Inside the media query
       @if $is-rfs-media-query {
-        $val: rfs-value($value);
+        $val: rfs.rfs-value($value);
 
         // Do not render anything if fluid and non fluid values are the same
-        $value: if($val == rfs-fluid-value($value), null, $val);
+        $value: if($val == rfs.rfs-fluid-value($value), null, $val);
       } @else {
-        $value: rfs-fluid-value($value);
+        $value: rfs.rfs-fluid-value($value);
       }
     }
 

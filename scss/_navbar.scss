@@ -115,12 +115,8 @@
   );
   --#{variables.$prefix}nav-link-font-weight: #{variables.$nav-link-font-weight};
   --#{variables.$prefix}nav-link-color: var(--#{variables.$prefix}navbar-color);
-  --#{variables.$prefix}nav-link-hover-color: var(
-    --#{variables.$prefix}navbar-hover-color
-  );
-  --#{variables.$prefix}nav-link-disabled-color: var(
-    --#{variables.$prefix}navbar-disabled-color
-  );
+  --#{variables.$prefix}nav-link-hover-color: var(--#{variables.$prefix}navbar-hover-color);
+  --#{variables.$prefix}nav-link-disabled-color: var(--#{variables.$prefix}navbar-disabled-color);
   // scss-docs-end navbar-nav-css-vars
 
   display: flex;

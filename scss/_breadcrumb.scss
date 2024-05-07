@@ -42,15 +42,7 @@
       float: left; // Suppress inline spacings and underlining of the separator
       padding-right: var(--#{variables.$prefix}breadcrumb-item-padding-x);
       color: var(--#{variables.$prefix}breadcrumb-divider-color);
-      content:
-        var(
-          --#{variables.$prefix}breadcrumb-divider,
-          escape-svg.escape-svg(variables.$breadcrumb-divider)
-        )
-        #{"/* rtl:"} var(
-          --#{variables.$prefix}breadcrumb-divider,
-          escape-svg.escape-svg(variables.$breadcrumb-divider-flipped)
-        ) #{"*/"};
+      content: var(--#{variables.$prefix}breadcrumb-divider, escape-svg.escape-svg(variables.$breadcrumb-divider)) #{"/* rtl:"} var(--#{variables.$prefix}breadcrumb-divider, escape-svg.escape-svg(variables.$breadcrumb-divider-flipped)) #{"*/"};
     }
   }
 

@@ -48,12 +48,8 @@
 
   // Note: Use `inspect` for lists so that quoted items keep the quotes.
   // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
-  --#{ variables.$prefix}font-sans-serif: #{inspect(
-    variables.$font-family-sans-serif
-  )};
-  --#{ variables.$prefix}font-monospace: #{inspect(
-    variables.$font-family-monospace
-  )};
+  --#{ variables.$prefix}font-sans-serif: #{inspect(variables.$font-family-sans-serif)};
+  --#{ variables.$prefix}font-monospace: #{inspect(variables.$font-family-monospace)};
   --#{ variables.$prefix}gradient: #{variables.$gradient};
 
   // Root and body
@@ -61,13 +57,8 @@
   @if variables.$font-size-root != null {
     --#{ variables.$prefix}root-font-size: #{variables.$font-size-root};
   }
-  --#{ variables.$prefix}body-font-family: #{inspect(
-    variables.$font-family-base
-  )};
-  @include rfs.rfs(
-    variables.$font-size-base,
-    --#{variables.$prefix}body-font-size
-  );
+  --#{ variables.$prefix}body-font-family: #{inspect(variables.$font-family-base)};
+  @include rfs.rfs(variables.$font-size-base, --#{variables.$prefix}body-font-size);
   --#{ variables.$prefix}body-font-weight: #{variables.$font-weight-base};
   --#{ variables.$prefix}body-line-height: #{variables.$line-height-base};
   @if variables.$body-text-align != null {
@@ -75,48 +66,32 @@
   }
 
   --#{ variables.$prefix}body-color: #{variables.$body-color};
-  --#{ variables.$prefix}body-color-rgb: #{functions.to-rgb(
-    variables.$body-color
-  )};
+  --#{ variables.$prefix}body-color-rgb: #{functions.to-rgb(variables.$body-color)};
   --#{ variables.$prefix}body-bg: #{variables.$body-bg};
   --#{ variables.$prefix}body-bg-rgb: #{functions.to-rgb(variables.$body-bg)};
 
   --#{ variables.$prefix}emphasis-color: #{variables.$body-emphasis-color};
-  --#{ variables.$prefix}emphasis-color-rgb: #{functions.to-rgb(
-    variables.$body-emphasis-color
-  )};
+  --#{ variables.$prefix}emphasis-color-rgb: #{functions.to-rgb(variables.$body-emphasis-color)};
 
   --#{ variables.$prefix}secondary-color: #{variables.$body-secondary-color};
-  --#{ variables.$prefix}secondary-color-rgb: #{functions.to-rgb(
-    variables.$body-secondary-color
-  )};
+  --#{ variables.$prefix}secondary-color-rgb: #{functions.to-rgb(variables.$body-secondary-color)};
   --#{ variables.$prefix}secondary-bg: #{variables.$body-secondary-bg};
-  --#{ variables.$prefix}secondary-bg-rgb: #{functions.to-rgb(
-    variables.$body-secondary-bg
-  )};
+  --#{ variables.$prefix}secondary-bg-rgb: #{functions.to-rgb(variables.$body-secondary-bg)};
 
   --#{ variables.$prefix}tertiary-color: #{variables.$body-tertiary-color};
-  --#{ variables.$prefix}tertiary-color-rgb: #{functions.to-rgb(
-    variables.$body-tertiary-color
-  )};
+  --#{ variables.$prefix}tertiary-color-rgb: #{functions.to-rgb(variables.$body-tertiary-color)};
   --#{ variables.$prefix}tertiary-bg: #{variables.$body-tertiary-bg};
-  --#{ variables.$prefix}tertiary-bg-rgb: #{functions.to-rgb(
-    variables.$body-tertiary-bg
-  )};
+  --#{ variables.$prefix}tertiary-bg-rgb: #{functions.to-rgb(variables.$body-tertiary-bg)};
   // scss-docs-end root-body-variables
 
   --#{ variables.$prefix}heading-color: #{variables.$headings-color};
 
   --#{ variables.$prefix}link-color: #{variables.$link-color};
-  --#{ variables.$prefix}link-color-rgb: #{functions.to-rgb(
-    variables.$link-color
-  )};
+  --#{ variables.$prefix}link-color-rgb: #{functions.to-rgb(variables.$link-color)};
   --#{ variables.$prefix}link-decoration: #{variables.$link-decoration};
 
   --#{ variables.$prefix}link-hover-color: #{variables.$link-hover-color};
-  --#{ variables.$prefix}link-hover-color-rgb: #{functions.to-rgb(
-    variables.$link-hover-color
-  )};
+  --#{ variables.$prefix}link-hover-color-rgb: #{functions.to-rgb(variables.$link-hover-color)};
 
   @if variables.$link-hover-decoration != null {
     --#{ variables.$prefix}link-hover-decoration: #{variables.$link-hover-decoration};
@@ -137,9 +112,7 @@
   --#{ variables.$prefix}border-radius-lg: #{variables.$border-radius-lg};
   --#{ variables.$prefix}border-radius-xl: #{variables.$border-radius-xl};
   --#{ variables.$prefix}border-radius-xxl: #{variables.$border-radius-xxl};
-  --#{ variables.$prefix}border-radius-2xl: var(
-    --#{variables.$prefix}border-radius-xxl
-  ); // Deprecated in v5.3.0 for consistency
+  --#{ variables.$prefix}border-radius-2xl: var(--#{variables.$prefix}border-radius-xxl); // Deprecated in v5.3.0 for consistency
   --#{ variables.$prefix}border-radius-pill: #{variables.$border-radius-pill};
   // scss-docs-end root-border-var
 
@@ -169,36 +142,22 @@
 
     // scss-docs-start root-dark-mode-vars
     --#{ variables.$prefix}body-color: #{variables-dark.$body-color-dark};
-    --#{ variables.$prefix}body-color-rgb: #{functions.to-rgb(
-      variables-dark.$body-color-dark
-    )};
+    --#{ variables.$prefix}body-color-rgb: #{functions.to-rgb(variables-dark.$body-color-dark)};
     --#{ variables.$prefix}body-bg: #{variables-dark.$body-bg-dark};
-    --#{ variables.$prefix}body-bg-rgb: #{functions.to-rgb(
-      variables-dark.$body-bg-dark
-    )};
+    --#{ variables.$prefix}body-bg-rgb: #{functions.to-rgb(variables-dark.$body-bg-dark)};
 
     --#{ variables.$prefix}emphasis-color: #{variables-dark.$body-emphasis-color-dark};
-    --#{ variables.$prefix}emphasis-color-rgb: #{functions.to-rgb(
-      variables-dark.$body-emphasis-color-dark
-    )};
+    --#{ variables.$prefix}emphasis-color-rgb: #{functions.to-rgb(variables-dark.$body-emphasis-color-dark)};
 
     --#{ variables.$prefix}secondary-color: #{variables-dark.$body-secondary-color-dark};
-    --#{ variables.$prefix}secondary-color-rgb: #{functions.to-rgb(
-      variables-dark.$body-secondary-color-dark
-    )};
+    --#{ variables.$prefix}secondary-color-rgb: #{functions.to-rgb(variables-dark.$body-secondary-color-dark)};
     --#{ variables.$prefix}secondary-bg: #{variables-dark.$body-secondary-bg-dark};
-    --#{ variables.$prefix}secondary-bg-rgb: #{functions.to-rgb(
-      variables-dark.$body-secondary-bg-dark
-    )};
+    --#{ variables.$prefix}secondary-bg-rgb: #{functions.to-rgb(variables-dark.$body-secondary-bg-dark)};
 
     --#{ variables.$prefix}tertiary-color: #{variables-dark.$body-tertiary-color-dark};
-    --#{ variables.$prefix}tertiary-color-rgb: #{functions.to-rgb(
-      variables-dark.$body-tertiary-color-dark
-    )};
+    --#{ variables.$prefix}tertiary-color-rgb: #{functions.to-rgb(variables-dark.$body-tertiary-color-dark)};
     --#{ variables.$prefix}tertiary-bg: #{variables-dark.$body-tertiary-bg-dark};
-    --#{ variables.$prefix}tertiary-bg-rgb: #{functions.to-rgb(
-      variables-dark.$body-tertiary-bg-dark
-    )};
+    --#{ variables.$prefix}tertiary-bg-rgb: #{functions.to-rgb(variables-dark.$body-tertiary-bg-dark)};
 
     @each $color, $value in maps.$theme-colors-text-dark {
       --#{ variables.$prefix}#{$color}-text-emphasis: #{$value};
@@ -216,12 +175,8 @@
 
     --#{ variables.$prefix}link-color: #{variables-dark.$link-color-dark};
     --#{ variables.$prefix}link-hover-color: #{variables-dark.$link-hover-color-dark};
-    --#{ variables.$prefix}link-color-rgb: #{functions.to-rgb(
-      variables-dark.$link-color-dark
-    )};
-    --#{ variables.$prefix}link-hover-color-rgb: #{functions.to-rgb(
-      variables-dark.$link-hover-color-dark
-    )};
+    --#{ variables.$prefix}link-color-rgb: #{functions.to-rgb(variables-dark.$link-color-dark)};
+    --#{ variables.$prefix}link-hover-color-rgb: #{functions.to-rgb(variables-dark.$link-hover-color-dark)};
 
     --#{ variables.$prefix}code-color: #{variables-dark.$code-color-dark};
     --#{ variables.$prefix}highlight-color: #{variables-dark.$mark-color-dark};

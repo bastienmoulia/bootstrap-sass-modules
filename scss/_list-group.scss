@@ -164,10 +164,7 @@
 
           &.active {
             margin-left: calc(-1 * var(--#{variables.$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
-            border-left-width:
-              var(
-                --#{variables.$prefix}list-group-border-width
-              );
+            border-left-width: var(--#{variables.$prefix}list-group-border-width);
           }
         }
       }
@@ -200,36 +197,16 @@
 
 @each $state in map-keys(variables.$theme-colors) {
   .list-group-item-#{$state} {
-    --#{variables.$prefix}list-group-color: var(
-      --#{variables.$prefix}#{$state}-text-emphasis
-    );
-    --#{variables.$prefix}list-group-bg: var(
-      --#{variables.$prefix}#{$state}-bg-subtle
-    );
-    --#{variables.$prefix}list-group-border-color: var(
-      --#{variables.$prefix}#{$state}-border-subtle
-    );
-    --#{variables.$prefix}list-group-action-hover-color: var(
-      --#{variables.$prefix}emphasis-color
-    );
-    --#{variables.$prefix}list-group-action-hover-bg: var(
-      --#{variables.$prefix}#{$state}-border-subtle
-    );
-    --#{variables.$prefix}list-group-action-active-color: var(
-      --#{variables.$prefix}emphasis-color
-    );
-    --#{variables.$prefix}list-group-action-active-bg: var(
-      --#{variables.$prefix}#{$state}-border-subtle
-    );
-    --#{variables.$prefix}list-group-active-color: var(
-      --#{variables.$prefix}#{$state}-bg-subtle
-    );
-    --#{variables.$prefix}list-group-active-bg: var(
-      --#{variables.$prefix}#{$state}-text-emphasis
-    );
-    --#{variables.$prefix}list-group-active-border-color: var(
-      --#{variables.$prefix}#{$state}-text-emphasis
-    );
+    --#{variables.$prefix}list-group-color: var(--#{variables.$prefix}#{$state}-text-emphasis);
+    --#{variables.$prefix}list-group-bg: var(--#{variables.$prefix}#{$state}-bg-subtle);
+    --#{variables.$prefix}list-group-border-color: var(--#{variables.$prefix}#{$state}-border-subtle);
+    --#{variables.$prefix}list-group-action-hover-color: var(--#{variables.$prefix}emphasis-color);
+    --#{variables.$prefix}list-group-action-hover-bg: var(--#{variables.$prefix}#{$state}-border-subtle);
+    --#{variables.$prefix}list-group-action-active-color: var(--#{variables.$prefix}emphasis-color);
+    --#{variables.$prefix}list-group-action-active-bg: var(--#{variables.$prefix}#{$state}-border-subtle);
+    --#{variables.$prefix}list-group-active-color: var(--#{variables.$prefix}#{$state}-bg-subtle);
+    --#{variables.$prefix}list-group-active-bg: var(--#{variables.$prefix}#{$state}-text-emphasis);
+    --#{variables.$prefix}list-group-active-border-color: var(--#{variables.$prefix}#{$state}-text-emphasis);
   }
 }
 // scss-docs-end list-group-modifiers
