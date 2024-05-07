@@ -43,9 +43,10 @@
   // Prevent double borders when buttons are next to each other
   > :not(.btn-check:first-child) + .btn,
   > .btn-group:not(:first-child) {
-    margin-left: calc(
-      #{variables.$btn-border-width} * -1
-    ); // stylelint-disable-line function-disallowed-list
+    margin-left:
+      calc(
+        #{variables.$btn-border-width} * -1
+      ); // stylelint-disable-line function-disallowed-list
   }
 
   // Reset rounded corners
@@ -82,8 +83,8 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: variables.$btn-padding-x * 0.75;
-  padding-left: variables.$btn-padding-x * 0.75;
+  padding-right: variables.$btn-padding-x * .75;
+  padding-left: variables.$btn-padding-x * .75;
 
   &::after,
   .dropup &::after,
@@ -97,13 +98,13 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: variables.$btn-padding-x-sm * 0.75;
-  padding-left: variables.$btn-padding-x-sm * 0.75;
+  padding-right: variables.$btn-padding-x-sm * .75;
+  padding-left: variables.$btn-padding-x-sm * .75;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: variables.$btn-padding-x-lg * 0.75;
-  padding-left: variables.$btn-padding-x-lg * 0.75;
+  padding-right: variables.$btn-padding-x-lg * .75;
+  padding-left: variables.$btn-padding-x-lg * .75;
 }
 
 // The clickable button for toggling the menu
@@ -133,9 +134,10 @@
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
-    margin-top: calc(
-      #{variables.$btn-border-width} * -1
-    ); // stylelint-disable-line function-disallowed-list
+    margin-top:
+      calc(
+        #{variables.$btn-border-width} * -1
+      ); // stylelint-disable-line function-disallowed-list
   }
 
   // Reset rounded corners

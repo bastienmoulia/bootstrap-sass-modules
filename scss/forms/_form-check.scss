@@ -39,8 +39,8 @@
   flex-shrink: 0;
   width: variables.$form-check-input-width;
   height: variables.$form-check-input-width;
-  margin-top: (variables.$line-height-base - variables.$form-check-input-width) *
-    0.5; // line-height minus check height
+  margin-top:
+    (variables.$line-height-base - variables.$form-check-input-width) * .5; // line-height minus check height
   vertical-align: top;
   appearance: none;
   background-color: var(--#{variables.$prefix}form-check-bg);
@@ -80,26 +80,26 @@
     &[type="checkbox"] {
       @if variables.$enable-gradients {
         --#{variables.$prefix}form-check-bg-image: #{escape-svg.escape-svg(
-              variables.$form-check-input-checked-bg-image
-            )},
+          variables.$form-check-input-checked-bg-image
+        )},
           var(--#{variables.$prefix}gradient);
       } @else {
         --#{variables.$prefix}form-check-bg-image: #{escape-svg.escape-svg(
-            variables.$form-check-input-checked-bg-image
-          )};
+          variables.$form-check-input-checked-bg-image
+        )};
       }
     }
 
     &[type="radio"] {
       @if variables.$enable-gradients {
         --#{variables.$prefix}form-check-bg-image: #{escape-svg.escape-svg(
-              variables.$form-check-radio-checked-bg-image
-            )},
+          variables.$form-check-radio-checked-bg-image
+        )},
           var(--#{variables.$prefix}gradient);
       } @else {
         --#{variables.$prefix}form-check-bg-image: #{escape-svg.escape-svg(
-            variables.$form-check-radio-checked-bg-image
-          )};
+          variables.$form-check-radio-checked-bg-image
+        )};
       }
     }
   }
@@ -110,13 +110,13 @@
 
     @if variables.$enable-gradients {
       --#{variables.$prefix}form-check-bg-image: #{escape-svg.escape-svg(
-            variables.$form-check-input-indeterminate-bg-image
-          )},
+        variables.$form-check-input-indeterminate-bg-image
+      )},
         var(--#{variables.$prefix}gradient);
     } @else {
       --#{variables.$prefix}form-check-bg-image: #{escape-svg.escape-svg(
-          variables.$form-check-input-indeterminate-bg-image
-        )};
+        variables.$form-check-input-indeterminate-bg-image
+      )};
     }
   }
 
@@ -151,8 +151,8 @@
 
   .form-check-input {
     --#{variables.$prefix}form-switch-bg: #{escape-svg.escape-svg(
-        variables.$form-switch-bg-image
-      )};
+      variables.$form-switch-bg-image
+    )};
 
     width: variables.$form-switch-width;
     margin-left: variables.$form-switch-padding-start * -1;
@@ -166,8 +166,8 @@
 
     &:focus {
       --#{variables.$prefix}form-switch-bg: #{escape-svg.escape-svg(
-          variables.$form-switch-focus-bg-image
-        )};
+        variables.$form-switch-focus-bg-image
+      )};
     }
 
     &:checked {
@@ -175,13 +175,13 @@
 
       @if variables.$enable-gradients {
         --#{variables.$prefix}form-switch-bg: #{escape-svg.escape-svg(
-              variables.$form-switch-checked-bg-image
-            )},
+          variables.$form-switch-checked-bg-image
+        )},
           var(--#{variables.$prefix}gradient);
       } @else {
         --#{variables.$prefix}form-switch-bg: #{escape-svg.escape-svg(
-            variables.$form-switch-checked-bg-image
-          )};
+          variables.$form-switch-checked-bg-image
+        )};
       }
     }
   }
@@ -221,8 +221,8 @@
   @include color-mode.color-mode(dark) {
     .form-switch .form-check-input:not(:checked):not(:focus) {
       --#{variables.$prefix}form-switch-bg: #{escape-svg.escape-svg(
-          variables-dark.$form-switch-bg-image-dark
-        )};
+        variables-dark.$form-switch-bg-image-dark
+      )};
     }
   }
 }

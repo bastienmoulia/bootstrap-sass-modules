@@ -19,7 +19,8 @@
 .img-thumbnail {
   padding: variables.$thumbnail-padding;
   background-color: variables.$thumbnail-bg;
-  border: variables.$thumbnail-border-width solid
+  border:
+    variables.$thumbnail-border-width solid
     variables.$thumbnail-border-color;
   @include border-radius.border-radius(variables.$thumbnail-border-radius);
   @include box-shadow.box-shadow(variables.$thumbnail-box-shadow);
@@ -38,7 +39,7 @@
 }
 
 .figure-img {
-  margin-bottom: variables.$spacer * 0.5;
+  margin-bottom: variables.$spacer * .5;
   line-height: 1;
 }
 

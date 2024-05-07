@@ -19,13 +19,15 @@
     left: 0;
     z-index: 2;
     height: 100%; // allow textareas
-    padding: variables.$form-floating-padding-y
+    padding:
+      variables.$form-floating-padding-y
       variables.$form-floating-padding-x;
     overflow: hidden;
-    color: rgba(
-      var(--#{variables.$prefix}body-color-rgb),
-      #{variables.$form-floating-label-opacity}
-    );
+    color:
+      rgba(
+        var(--#{variables.$prefix}body-color-rgb),
+        #{variables.$form-floating-label-opacity}
+      );
     text-align: start;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -37,7 +39,8 @@
 
   > .form-control,
   > .form-control-plaintext {
-    padding: variables.$form-floating-padding-y
+    padding:
+      variables.$form-floating-padding-y
       variables.$form-floating-padding-x;
 
     &::placeholder {
@@ -70,8 +73,9 @@
 
       &::after {
         position: absolute;
-        inset: variables.$form-floating-padding-y
-          (variables.$form-floating-padding-x * 0.5);
+        inset:
+          variables.$form-floating-padding-y
+          (variables.$form-floating-padding-x * .5);
         z-index: -1;
         height: variables.$form-floating-label-height;
         content: "";

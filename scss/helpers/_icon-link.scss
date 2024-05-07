@@ -5,10 +5,11 @@
   display: inline-flex;
   gap: variables.$icon-link-gap;
   align-items: center;
-  text-decoration-color: rgba(
-    var(--#{variables.$prefix}link-color-rgb),
-    var(--#{variables.$prefix}link-opacity, 0.5)
-  );
+  text-decoration-color:
+    rgba(
+      var(--#{variables.$prefix}link-color-rgb),
+      var(--#{variables.$prefix}link-opacity, .5)
+    );
   text-underline-offset: variables.$icon-link-underline-offset;
   backface-visibility: hidden;
 
@@ -25,10 +26,11 @@
   &:hover,
   &:focus-visible {
     > .bi {
-      transform: var(
-        --#{variables.$prefix}icon-link-transform,
-        variables.$icon-link-icon-transform
-      );
+      transform:
+        var(
+          --#{variables.$prefix}icon-link-transform,
+          variables.$icon-link-icon-transform
+        );
     }
   }
 }

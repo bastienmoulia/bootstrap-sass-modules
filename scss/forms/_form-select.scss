@@ -15,12 +15,13 @@
 
 .form-select {
   --#{variables.$prefix}form-select-bg-img: #{escape-svg.escape-svg(
-      variables.$form-select-indicator
-    )};
+    variables.$form-select-indicator
+  )};
 
   display: block;
   width: 100%;
-  padding: variables.$form-select-padding-y
+  padding:
+    variables.$form-select-padding-y
     variables.$form-select-indicator-padding variables.$form-select-padding-y
     variables.$form-select-padding-x;
   font-family: variables.$form-select-font-family;
@@ -30,12 +31,12 @@
   color: variables.$form-select-color;
   appearance: none;
   background-color: variables.$form-select-bg;
-  background-image: var(--#{variables.$prefix}form-select-bg-img),
-    var(--#{variables.$prefix}form-select-bg-icon, none);
+  background-image: var(--#{variables.$prefix}form-select-bg-img), var(--#{variables.$prefix}form-select-bg-icon, none);
   background-repeat: no-repeat;
   background-position: variables.$form-select-bg-position;
   background-size: variables.$form-select-bg-size;
-  border: variables.$form-select-border-width solid
+  border:
+    variables.$form-select-border-width solid
     variables.$form-select-border-color;
   @include border-radius.border-radius(variables.$form-select-border-radius, 0);
   @include box-shadow.box-shadow(variables.$form-select-box-shadow);
@@ -94,8 +95,8 @@
   @include color-mode.color-mode(dark) {
     .form-select {
       --#{variables.$prefix}form-select-bg-img: #{escape-svg.escape-svg(
-          variables-dark.$form-select-indicator-dark
-        )};
+        variables-dark.$form-select-indicator-dark
+      )};
     }
   }
 }

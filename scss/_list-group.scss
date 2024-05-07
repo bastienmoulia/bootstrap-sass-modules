@@ -81,12 +81,14 @@
 .list-group-item {
   position: relative;
   display: block;
-  padding: var(--#{variables.$prefix}list-group-item-padding-y)
+  padding:
+    var(--#{variables.$prefix}list-group-item-padding-y)
     var(--#{variables.$prefix}list-group-item-padding-x);
   color: var(--#{variables.$prefix}list-group-color);
   text-decoration: if(variables.$link-decoration == none, null, none);
   background-color: var(--#{variables.$prefix}list-group-bg);
-  border: var(--#{variables.$prefix}list-group-border-width) solid
+  border:
+    var(--#{variables.$prefix}list-group-border-width) solid
     var(--#{variables.$prefix}list-group-border-color);
 
   &:first-child {
@@ -117,9 +119,10 @@
     border-top-width: 0;
 
     &.active {
-      margin-top: calc(
-        -1 * var(--#{variables.$prefix}list-group-border-width)
-      ); // stylelint-disable-line function-disallowed-list
+      margin-top:
+        calc(
+          -1 * var(--#{variables.$prefix}list-group-border-width)
+        ); // stylelint-disable-line function-disallowed-list
       border-top-width: var(--#{variables.$prefix}list-group-border-width);
     }
   }
@@ -163,12 +166,14 @@
           border-left-width: 0;
 
           &.active {
-            margin-left: calc(
-              -1 * var(--#{variables.$prefix}list-group-border-width)
-            ); // stylelint-disable-line function-disallowed-list
-            border-left-width: var(
-              --#{variables.$prefix}list-group-border-width
-            );
+            margin-left:
+              calc(
+                -1 * var(--#{variables.$prefix}list-group-border-width)
+              ); // stylelint-disable-line function-disallowed-list
+            border-left-width:
+              var(
+                --#{variables.$prefix}list-group-border-width
+              );
           }
         }
       }

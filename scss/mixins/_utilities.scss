@@ -76,9 +76,8 @@
         }
 
         @each $pseudo in $state {
-          .#{$property-class
-            + $infix
-            + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+          .#{$property-class + $infix
+          + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
             --#{variables.$prefix}#{$css-variable-name}: #{$value};
           }
         }
@@ -90,22 +89,24 @@
                 --#{variables.$prefix}#{$local-var}: #{$variable};
               }
             }
-            #{$property}: $value
+            #{$property}:
+              $value
               if(variables.$enable-important-utilities, !important, null);
           }
         }
 
         @each $pseudo in $state {
           .#{$property-class
-            + $infix
-            + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+          + $infix
+          + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
             @each $property in $properties {
               @if $is-local-vars {
                 @each $local-var, $variable in $is-local-vars {
                   --#{variables.$prefix}#{$local-var}: #{$variable};
                 }
               }
-              #{$property}: $value
+              #{$property}:
+                $value
                 if(variables.$enable-important-utilities, !important, null);
             }
           }

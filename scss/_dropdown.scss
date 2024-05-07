@@ -61,7 +61,8 @@
   z-index: var(--#{variables.$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
   min-width: var(--#{variables.$prefix}dropdown-min-width);
-  padding: var(--#{variables.$prefix}dropdown-padding-y)
+  padding:
+    var(--#{variables.$prefix}dropdown-padding-y)
     var(--#{variables.$prefix}dropdown-padding-x);
   margin: 0; // Override default margin of ul
   @include rfs.font-size(var(--#{variables.$prefix}dropdown-font-size));
@@ -70,7 +71,8 @@
   list-style: none;
   background-color: var(--#{variables.$prefix}dropdown-bg);
   background-clip: padding-box;
-  border: var(--#{variables.$prefix}dropdown-border-width) solid
+  border:
+    var(--#{variables.$prefix}dropdown-border-width) solid
     var(--#{variables.$prefix}dropdown-border-color);
   @include border-radius.border-radius(
     var(--#{variables.$prefix}dropdown-border-radius)
@@ -197,7 +199,8 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: var(--#{variables.$prefix}dropdown-item-padding-y)
+  padding:
+    var(--#{variables.$prefix}dropdown-item-padding-y)
     var(--#{variables.$prefix}dropdown-item-padding-x);
   clear: both;
   font-weight: variables.$font-weight-normal;
@@ -214,11 +217,12 @@
   &:hover,
   &:focus {
     color: var(--#{variables.$prefix}dropdown-link-hover-color);
-    text-decoration: if(
-      variables.$link-hover-decoration == underline,
-      none,
-      null
-    );
+    text-decoration:
+      if(
+        variables.$link-hover-decoration == underline,
+        none,
+        null
+      );
     @include gradients.gradient-bg(
       var(--#{variables.$prefix}dropdown-link-hover-bg)
     );
@@ -250,7 +254,8 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: var(--#{variables.$prefix}dropdown-header-padding-y)
+  padding:
+    var(--#{variables.$prefix}dropdown-header-padding-y)
     var(--#{variables.$prefix}dropdown-header-padding-x);
   margin-bottom: 0; // for use with heading elements
   @include rfs.font-size(variables.$font-size-sm);
@@ -261,7 +266,8 @@
 // Dropdown text
 .dropdown-item-text {
   display: block;
-  padding: var(--#{variables.$prefix}dropdown-item-padding-y)
+  padding:
+    var(--#{variables.$prefix}dropdown-item-padding-y)
     var(--#{variables.$prefix}dropdown-item-padding-x);
   color: var(--#{variables.$prefix}dropdown-link-color);
 }

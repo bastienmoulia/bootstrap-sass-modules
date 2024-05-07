@@ -22,7 +22,8 @@
   // scss-docs-end badge-css-vars
 
   display: inline-block;
-  padding: var(--#{variables.$prefix}badge-padding-y)
+  padding:
+    var(--#{variables.$prefix}badge-padding-y)
     var(--#{variables.$prefix}badge-padding-x);
   @include rfs.font-size(var(--#{variables.$prefix}badge-font-size));
   font-weight: var(--#{variables.$prefix}badge-font-weight);

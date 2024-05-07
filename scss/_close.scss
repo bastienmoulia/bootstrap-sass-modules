@@ -12,8 +12,8 @@
   // scss-docs-start close-css-vars
   --#{variables.$prefix}btn-close-color: #{variables.$btn-close-color};
   --#{variables.$prefix}btn-close-bg: #{escape-svg.escape-svg(
-      variables.$btn-close-bg
-    )};
+    variables.$btn-close-bg
+  )};
   --#{variables.$prefix}btn-close-opacity: #{variables.$btn-close-opacity};
   --#{variables.$prefix}btn-close-hover-opacity: #{variables.$btn-close-hover-opacity};
   --#{variables.$prefix}btn-close-focus-shadow: #{variables.$btn-close-focus-shadow};
@@ -27,7 +27,8 @@
   height: variables.$btn-close-height;
   padding: variables.$btn-close-padding-y variables.$btn-close-padding-x;
   color: var(--#{variables.$prefix}btn-close-color);
-  background: transparent var(--#{variables.$prefix}btn-close-bg) center /
+  background:
+    transparent var(--#{variables.$prefix}btn-close-bg) center /
     variables.$btn-close-width auto no-repeat; // include transparent for button elements
   border: 0; // for button elements
   @include border-radius.border-radius();

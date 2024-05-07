@@ -32,7 +32,8 @@
 
 .nav-link {
   display: block;
-  padding: var(--#{variables.$prefix}nav-link-padding-y)
+  padding:
+    var(--#{variables.$prefix}nav-link-padding-y)
     var(--#{variables.$prefix}nav-link-padding-x);
   @include rfs.font-size(var(--#{variables.$prefix}nav-link-font-size));
   font-weight: var(--#{variables.$prefix}nav-link-font-weight);
@@ -45,11 +46,12 @@
   &:hover,
   &:focus {
     color: var(--#{variables.$prefix}nav-link-hover-color);
-    text-decoration: if(
-      variables.$link-hover-decoration == underline,
-      none,
-      null
-    );
+    text-decoration:
+      if(
+        variables.$link-hover-decoration == underline,
+        none,
+        null
+      );
   }
 
   &:focus-visible {
@@ -81,13 +83,15 @@
   --#{variables.$prefix}nav-tabs-link-active-border-color: #{variables.$nav-tabs-link-active-border-color};
   // scss-docs-end nav-tabs-css-vars
 
-  border-bottom: var(--#{variables.$prefix}nav-tabs-border-width) solid
+  border-bottom:
+    var(--#{variables.$prefix}nav-tabs-border-width) solid
     var(--#{variables.$prefix}nav-tabs-border-color);
 
   .nav-link {
-    margin-bottom: calc(
-      -1 * var(--#{variables.$prefix}nav-tabs-border-width)
-    ); // stylelint-disable-line function-disallowed-list
+    margin-bottom:
+      calc(
+        -1 * var(--#{variables.$prefix}nav-tabs-border-width)
+      ); // stylelint-disable-line function-disallowed-list
     border: var(--#{variables.$prefix}nav-tabs-border-width) solid transparent;
     @include border-radius.border-top-radius(
       var(--#{variables.$prefix}nav-tabs-border-radius)
@@ -110,9 +114,10 @@
 
   .dropdown-menu {
     // Make dropdown border overlap tab border
-    margin-top: calc(
-      -1 * var(--#{variables.$prefix}nav-tabs-border-width)
-    ); // stylelint-disable-line function-disallowed-list
+    margin-top:
+      calc(
+        -1 * var(--#{variables.$prefix}nav-tabs-border-width)
+      ); // stylelint-disable-line function-disallowed-list
     // Remove the top rounded corners here since there is a hard edge above the menu
     @include border-radius.border-top-radius(0);
   }
@@ -160,7 +165,8 @@
   .nav-link {
     padding-right: 0;
     padding-left: 0;
-    border-bottom: var(--#{variables.$prefix}nav-underline-border-width) solid
+    border-bottom:
+      var(--#{variables.$prefix}nav-underline-border-width) solid
       transparent;
 
     &:hover,

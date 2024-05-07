@@ -39,7 +39,8 @@
   word-wrap: break-word;
   background-color: var(--#{variables.$prefix}card-bg);
   background-clip: border-box;
-  border: var(--#{variables.$prefix}card-border-width) solid
+  border:
+    var(--#{variables.$prefix}card-border-width) solid
     var(--#{variables.$prefix}card-border-color);
   @include border-radius.border-radius(
     var(--#{variables.$prefix}card-border-radius)
@@ -82,7 +83,8 @@
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
-  padding: var(--#{variables.$prefix}card-spacer-y)
+  padding:
+    var(--#{variables.$prefix}card-spacer-y)
     var(--#{variables.$prefix}card-spacer-x);
   color: var(--#{variables.$prefix}card-color);
 }
@@ -93,9 +95,10 @@
 }
 
 .card-subtitle {
-  margin-top: calc(
-    -0.5 * var(--#{variables.$prefix}card-title-spacer-y)
-  ); // stylelint-disable-line function-disallowed-list
+  margin-top:
+    calc(
+      -.5 * var(--#{variables.$prefix}card-title-spacer-y)
+    ); // stylelint-disable-line function-disallowed-list
   margin-bottom: 0;
   color: var(--#{variables.$prefix}card-subtitle-color);
 }
@@ -106,11 +109,12 @@
 
 .card-link {
   &:hover {
-    text-decoration: if(
-      variables.$link-hover-decoration == underline,
-      none,
-      null
-    );
+    text-decoration:
+      if(
+        variables.$link-hover-decoration == underline,
+        none,
+        null
+      );
   }
 
   + .card-link {
@@ -123,34 +127,38 @@
 //
 
 .card-header {
-  padding: var(--#{variables.$prefix}card-cap-padding-y)
+  padding:
+    var(--#{variables.$prefix}card-cap-padding-y)
     var(--#{variables.$prefix}card-cap-padding-x);
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
   color: var(--#{variables.$prefix}card-cap-color);
   background-color: var(--#{variables.$prefix}card-cap-bg);
-  border-bottom: var(--#{variables.$prefix}card-border-width) solid
+  border-bottom:
+    var(--#{variables.$prefix}card-border-width) solid
     var(--#{variables.$prefix}card-border-color);
 
   &:first-child {
     @include border-radius.border-radius(
       var(--#{variables.$prefix}card-inner-border-radius)
-        var(--#{variables.$prefix}card-inner-border-radius) 0 0
+      var(--#{variables.$prefix}card-inner-border-radius) 0 0
     );
   }
 }
 
 .card-footer {
-  padding: var(--#{variables.$prefix}card-cap-padding-y)
+  padding:
+    var(--#{variables.$prefix}card-cap-padding-y)
     var(--#{variables.$prefix}card-cap-padding-x);
   color: var(--#{variables.$prefix}card-cap-color);
   background-color: var(--#{variables.$prefix}card-cap-bg);
-  border-top: var(--#{variables.$prefix}card-border-width) solid
+  border-top:
+    var(--#{variables.$prefix}card-border-width) solid
     var(--#{variables.$prefix}card-border-color);
 
   &:last-child {
     @include border-radius.border-radius(
       0 0 var(--#{variables.$prefix}card-inner-border-radius)
-        var(--#{variables.$prefix}card-inner-border-radius)
+      var(--#{variables.$prefix}card-inner-border-radius)
     );
   }
 }
@@ -160,15 +168,18 @@
 //
 
 .card-header-tabs {
-  margin-right: calc(
-    -0.5 * var(--#{variables.$prefix}card-cap-padding-x)
-  ); // stylelint-disable-line function-disallowed-list
-  margin-bottom: calc(
-    -1 * var(--#{variables.$prefix}card-cap-padding-y)
-  ); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(
-    -0.5 * var(--#{variables.$prefix}card-cap-padding-x)
-  ); // stylelint-disable-line function-disallowed-list
+  margin-right:
+    calc(
+      -.5 * var(--#{variables.$prefix}card-cap-padding-x)
+    ); // stylelint-disable-line function-disallowed-list
+  margin-bottom:
+    calc(
+      -1 * var(--#{variables.$prefix}card-cap-padding-y)
+    ); // stylelint-disable-line function-disallowed-list
+  margin-left:
+    calc(
+      -.5 * var(--#{variables.$prefix}card-cap-padding-x)
+    ); // stylelint-disable-line function-disallowed-list
   border-bottom: 0;
 
   .nav-link.active {
@@ -178,12 +189,14 @@
 }
 
 .card-header-pills {
-  margin-right: calc(
-    -0.5 * var(--#{variables.$prefix}card-cap-padding-x)
-  ); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(
-    -0.5 * var(--#{variables.$prefix}card-cap-padding-x)
-  ); // stylelint-disable-line function-disallowed-list
+  margin-right:
+    calc(
+      -.5 * var(--#{variables.$prefix}card-cap-padding-x)
+    ); // stylelint-disable-line function-disallowed-list
+  margin-left:
+    calc(
+      -.5 * var(--#{variables.$prefix}card-cap-padding-x)
+    ); // stylelint-disable-line function-disallowed-list
 }
 
 // Card image

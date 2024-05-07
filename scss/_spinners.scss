@@ -12,7 +12,8 @@
   vertical-align: var(--#{variables.$prefix}spinner-vertical-align);
   // stylelint-disable-next-line property-disallowed-list
   border-radius: 50%;
-  animation: var(--#{variables.$prefix}spinner-animation-speed) linear infinite
+  animation:
+    var(--#{variables.$prefix}spinner-animation-speed) linear infinite
     var(--#{variables.$prefix}spinner-animation-name);
 }
 

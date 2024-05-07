@@ -17,10 +17,10 @@
 .navbar {
   // scss-docs-start navbar-css-vars
   --#{variables.$prefix}navbar-padding-x: #{if(
-      variables.$navbar-padding-x == null,
-      0,
-      variables.$navbar-padding-x
-    )};
+    variables.$navbar-padding-x == null,
+    0,
+    variables.$navbar-padding-x
+  )};
   --#{variables.$prefix}navbar-padding-y: #{variables.$navbar-padding-y};
   --#{variables.$prefix}navbar-color: #{variables.$navbar-light-color};
   --#{variables.$prefix}navbar-hover-color: #{variables.$navbar-light-hover-color};
@@ -36,8 +36,8 @@
   --#{variables.$prefix}navbar-toggler-padding-x: #{variables.$navbar-toggler-padding-x};
   --#{variables.$prefix}navbar-toggler-font-size: #{variables.$navbar-toggler-font-size};
   --#{variables.$prefix}navbar-toggler-icon-bg: #{escape-svg.escape-svg(
-      variables.$navbar-light-toggler-icon-bg
-    )};
+    variables.$navbar-light-toggler-icon-bg
+  )};
   --#{variables.$prefix}navbar-toggler-border-color: #{variables.$navbar-light-toggler-border-color};
   --#{variables.$prefix}navbar-toggler-border-radius: #{variables.$navbar-toggler-border-radius};
   --#{variables.$prefix}navbar-toggler-focus-width: #{variables.$navbar-toggler-focus-width};
@@ -49,7 +49,8 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: var(--#{variables.$prefix}navbar-padding-y)
+  padding:
+    var(--#{variables.$prefix}navbar-padding-y)
     var(--#{variables.$prefix}navbar-padding-x);
   @include gradients.gradient-bg();
 
@@ -91,11 +92,12 @@
   &:hover,
   &:focus {
     color: var(--#{variables.$prefix}navbar-brand-hover-color);
-    text-decoration: if(
-      variables.$link-hover-decoration == underline,
-      none,
-      null
-    );
+    text-decoration:
+      if(
+        variables.$link-hover-decoration == underline,
+        none,
+        null
+      );
   }
 }
 
@@ -173,13 +175,15 @@
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  padding: var(--#{variables.$prefix}navbar-toggler-padding-y)
+  padding:
+    var(--#{variables.$prefix}navbar-toggler-padding-y)
     var(--#{variables.$prefix}navbar-toggler-padding-x);
   @include rfs.font-size(var(--#{variables.$prefix}navbar-toggler-font-size));
   line-height: 1;
   color: var(--#{variables.$prefix}navbar-color);
   background-color: transparent; // remove default button style
-  border: var(--#{variables.$prefix}border-width) solid
+  border:
+    var(--#{variables.$prefix}border-width) solid
     var(--#{variables.$prefix}navbar-toggler-border-color); // remove default button style
   @include border-radius.border-radius(
     var(--#{variables.$prefix}navbar-toggler-border-radius)
@@ -311,8 +315,8 @@
   --#{variables.$prefix}navbar-brand-hover-color: #{variables.$navbar-dark-brand-hover-color};
   --#{variables.$prefix}navbar-toggler-border-color: #{variables.$navbar-dark-toggler-border-color};
   --#{variables.$prefix}navbar-toggler-icon-bg: #{escape-svg.escape-svg(
-      variables.$navbar-dark-toggler-icon-bg
-    )};
+    variables.$navbar-dark-toggler-icon-bg
+  )};
   // scss-docs-end navbar-dark-css-vars
 }
 
@@ -320,8 +324,8 @@
   @include color-mode.color-mode(dark) {
     .navbar-toggler-icon {
       --#{variables.$prefix}navbar-toggler-icon-bg: #{escape-svg.escape-svg(
-          variables.$navbar-dark-toggler-icon-bg
-        )};
+        variables.$navbar-dark-toggler-icon-bg
+      )};
     }
   }
 }

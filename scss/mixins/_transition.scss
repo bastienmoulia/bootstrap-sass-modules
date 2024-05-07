@@ -20,10 +20,8 @@
     }
 
     @if variables.$enable-reduced-motion and
-      nth($transition, 1) !=
-      null and
-      nth($transition, 1) !=
-      none
+      nth($transition, 1) != and
+      nth($transition, 1) != none
     {
       @media (prefers-reduced-motion: reduce) {
         transition: none;

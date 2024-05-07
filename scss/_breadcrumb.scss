@@ -21,7 +21,8 @@
 
   display: flex;
   flex-wrap: wrap;
-  padding: var(--#{variables.$prefix}breadcrumb-padding-y)
+  padding:
+    var(--#{variables.$prefix}breadcrumb-padding-y)
     var(--#{variables.$prefix}breadcrumb-padding-x);
   margin-bottom: var(--#{variables.$prefix}breadcrumb-margin-bottom);
   @include rfs.font-size(var(--#{variables.$prefix}breadcrumb-font-size));
@@ -41,7 +42,8 @@
       float: left; // Suppress inline spacings and underlining of the separator
       padding-right: var(--#{variables.$prefix}breadcrumb-item-padding-x);
       color: var(--#{variables.$prefix}breadcrumb-divider-color);
-      content: var(
+      content:
+        var(
           --#{variables.$prefix}breadcrumb-divider,
           escape-svg.escape-svg(variables.$breadcrumb-divider)
         )

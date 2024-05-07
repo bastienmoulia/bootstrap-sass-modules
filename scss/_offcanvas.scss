@@ -61,7 +61,8 @@
         top: 0;
         left: 0;
         width: var(--#{variables.$prefix}offcanvas-width);
-        border-right: var(--#{variables.$prefix}offcanvas-border-width) solid
+        border-right:
+          var(--#{variables.$prefix}offcanvas-border-width) solid
           var(--#{variables.$prefix}offcanvas-border-color);
         transform: translateX(-100%);
       }
@@ -70,7 +71,8 @@
         top: 0;
         right: 0;
         width: var(--#{variables.$prefix}offcanvas-width);
-        border-left: var(--#{variables.$prefix}offcanvas-border-width) solid
+        border-left:
+          var(--#{variables.$prefix}offcanvas-border-width) solid
           var(--#{variables.$prefix}offcanvas-border-color);
         transform: translateX(100%);
       }
@@ -81,7 +83,8 @@
         left: 0;
         height: var(--#{variables.$prefix}offcanvas-height);
         max-height: 100%;
-        border-bottom: var(--#{variables.$prefix}offcanvas-border-width) solid
+        border-bottom:
+          var(--#{variables.$prefix}offcanvas-border-width) solid
           var(--#{variables.$prefix}offcanvas-border-color);
         transform: translateY(-100%);
       }
@@ -91,7 +94,8 @@
         left: 0;
         height: var(--#{variables.$prefix}offcanvas-height);
         max-height: 100%;
-        border-top: var(--#{variables.$prefix}offcanvas-border-width) solid
+        border-top:
+          var(--#{variables.$prefix}offcanvas-border-width) solid
           var(--#{variables.$prefix}offcanvas-border-color);
         transform: translateY(100%);
       }
@@ -142,15 +146,18 @@
 .offcanvas-header {
   display: flex;
   align-items: center;
-  padding: var(--#{variables.$prefix}offcanvas-padding-y)
+  padding:
+    var(--#{variables.$prefix}offcanvas-padding-y)
     var(--#{variables.$prefix}offcanvas-padding-x);
 
   .btn-close {
-    padding: calc(var(--#{variables.$prefix}offcanvas-padding-y) * 0.5)
-      calc(var(--#{variables.$prefix}offcanvas-padding-x) * 0.5);
-    margin: calc(-0.5 * var(--#{variables.$prefix}offcanvas-padding-y))
-      calc(-0.5 * var(--#{variables.$prefix}offcanvas-padding-x))
-      calc(-0.5 * var(--#{variables.$prefix}offcanvas-padding-y)) auto;
+    padding:
+      calc(var(--#{variables.$prefix}offcanvas-padding-y) * .5)
+      calc(var(--#{variables.$prefix}offcanvas-padding-x) * .5);
+    margin:
+      calc(-.5 * var(--#{variables.$prefix}offcanvas-padding-y))
+      calc(-.5 * var(--#{variables.$prefix}offcanvas-padding-x))
+      calc(-.5 * var(--#{variables.$prefix}offcanvas-padding-y)) auto;
   }
 }
 
@@ -161,7 +168,8 @@
 
 .offcanvas-body {
   flex-grow: 1;
-  padding: var(--#{variables.$prefix}offcanvas-padding-y)
+  padding:
+    var(--#{variables.$prefix}offcanvas-padding-y)
     var(--#{variables.$prefix}offcanvas-padding-x);
   overflow-y: auto;
 }

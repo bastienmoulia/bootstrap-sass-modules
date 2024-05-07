@@ -66,11 +66,12 @@
     // https://github.com/twbs/bootstrap/issues/23307
     // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
     // Multiply line-height by 1em if it has no unit
-    height: if(
-      unit(variables.$input-line-height) == "",
-      variables.$input-line-height * 1em,
-      variables.$input-line-height
-    );
+    height:
+      if(
+        unit(variables.$input-line-height) == "",
+        variables.$input-line-height * 1em,
+        variables.$input-line-height
+      );
 
     // Android Chrome type="date" is taller than the other inputs
     // because of "margin: 1px 24px 1px 4px" inside the shadow DOM
@@ -168,7 +169,8 @@
 
   &::file-selector-button {
     padding: variables.$input-padding-y-sm variables.$input-padding-x-sm;
-    margin: (-(variables.$input-padding-y-sm))
+    margin:
+      (-(variables.$input-padding-y-sm))
       (-(variables.$input-padding-x-sm));
     margin-inline-end: variables.$input-padding-x-sm;
   }
@@ -182,7 +184,8 @@
 
   &::file-selector-button {
     padding: variables.$input-padding-y-lg variables.$input-padding-x-lg;
-    margin: (-(variables.$input-padding-y-lg))
+    margin:
+      (-(variables.$input-padding-y-lg))
       (-(variables.$input-padding-x-lg));
     margin-inline-end: variables.$input-padding-x-lg;
   }

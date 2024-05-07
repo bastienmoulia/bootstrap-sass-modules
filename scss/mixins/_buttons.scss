@@ -12,7 +12,7 @@
   $background,
   $border,
   $color:
-    functions.color-contrast(
+  functions.color-contrast(
       $background,
       variables.$color-contrast-dark,
       variables.$color-contrast-light,
@@ -32,15 +32,14 @@
       functions.shade-color($border, variables.$btn-hover-border-shade-amount),
       functions.tint-color($border, variables.$btn-hover-border-tint-amount)
     ),
-  $hover-color:
-    functions.color-contrast(
-      $hover-background,
-      variables.$color-contrast-dark,
-      variables.$color-contrast-light,
-      variables.$min-contrast-ratio,
-      variables.$white,
-      variables.$black
-    ),
+  $hover-color: functions.color-contrast(
+    $hover-background,
+    variables.$color-contrast-dark,
+    variables.$color-contrast-light,
+    variables.$min-contrast-ratio,
+    variables.$white,
+    variables.$black
+  ),
   $active-background:
     if(
       $color == variables.$color-contrast-light,
@@ -53,26 +52,24 @@
       functions.shade-color($border, variables.$btn-active-border-shade-amount),
       functions.tint-color($border, variables.$btn-active-border-tint-amount)
     ),
-  $active-color:
-    functions.color-contrast(
-      $active-background,
-      variables.$color-contrast-dark,
-      variables.$color-contrast-light,
-      variables.$min-contrast-ratio,
-      variables.$white,
-      variables.$black
-    ),
+  $active-color: functions.color-contrast(
+    $active-background,
+    variables.$color-contrast-dark,
+    variables.$color-contrast-light,
+    variables.$min-contrast-ratio,
+    variables.$white,
+    variables.$black
+  ),
   $disabled-background: $background,
   $disabled-border: $border,
-  $disabled-color:
-    functions.color-contrast(
-      $disabled-background,
-      variables.$color-contrast-dark,
-      variables.$color-contrast-light,
-      variables.$min-contrast-ratio,
-      variables.$white,
-      variables.$black
-    )
+  $disabled-color: functions.color-contrast(
+    $disabled-background,
+    variables.$color-contrast-dark,
+    variables.$color-contrast-light,
+    variables.$min-contrast-ratio,
+    variables.$white,
+    variables.$black
+  )
 ) {
   --#{variables.$prefix}btn-color: #{$color};
   --#{variables.$prefix}btn-bg: #{$background};
@@ -81,8 +78,8 @@
   --#{variables.$prefix}btn-hover-bg: #{$hover-background};
   --#{variables.$prefix}btn-hover-border-color: #{$hover-border};
   --#{variables.$prefix}btn-focus-shadow-rgb: #{functions.to-rgb(
-      mix($color, $border, 15%)
-    )};
+    mix($color, $border, 15%)
+  )};
   --#{variables.$prefix}btn-active-color: #{$active-color};
   --#{variables.$prefix}btn-active-bg: #{$active-background};
   --#{variables.$prefix}btn-active-border-color: #{$active-border};
@@ -97,25 +94,24 @@
 @mixin button-outline-variant(
   $color,
   $color-hover:
-    functions.color-contrast(
-      $color,
-      variables.$color-contrast-dark,
-      variables.$color-contrast-light,
-      variables.$min-contrast-ratio,
-      variables.$white,
-      variables.$black
-    ),
+  functions.color-contrast(
+    $color,
+    variables.$color-contrast-dark,
+    variables.$color-contrast-light,
+    variables.$min-contrast-ratio,
+    variables.$white,
+    variables.$black
+  ),
   $active-background: $color,
   $active-border: $color,
-  $active-color:
-    functions.color-contrast(
-      $active-background,
-      variables.$color-contrast-dark,
-      variables.$color-contrast-light,
-      variables.$min-contrast-ratio,
-      variables.$white,
-      variables.$black
-    )
+  $active-color: functions.color-contrast(
+    $active-background,
+    variables.$color-contrast-dark,
+    variables.$color-contrast-light,
+    variables.$min-contrast-ratio,
+    variables.$white,
+    variables.$black
+  )
 ) {
   --#{variables.$prefix}btn-color: #{$color};
   --#{variables.$prefix}btn-border-color: #{$color};

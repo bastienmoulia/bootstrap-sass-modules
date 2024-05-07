@@ -60,31 +60,35 @@
 }
 
 .bs-tooltip-top .tooltip-arrow {
-  bottom: calc(
-    -1 * var(--#{variables.$prefix}tooltip-arrow-height)
-  ); // stylelint-disable-line function-disallowed-list
+  bottom:
+    calc(
+      -1 * var(--#{variables.$prefix}tooltip-arrow-height)
+    ); // stylelint-disable-line function-disallowed-list
 
   &::before {
     top: -1px;
-    border-width: var(--#{variables.$prefix}tooltip-arrow-height)
-      calc(var(--#{variables.$prefix}tooltip-arrow-width) * 0.5) 0; // stylelint-disable-line function-disallowed-list
+    border-width:
+      var(--#{variables.$prefix}tooltip-arrow-height)
+      calc(var(--#{variables.$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
     border-top-color: var(--#{variables.$prefix}tooltip-bg);
   }
 }
 
 /* rtl:begin:ignore */
 .bs-tooltip-end .tooltip-arrow {
-  left: calc(
-    -1 * var(--#{variables.$prefix}tooltip-arrow-height)
-  ); // stylelint-disable-line function-disallowed-list
+  left:
+    calc(
+      -1 * var(--#{variables.$prefix}tooltip-arrow-height)
+    ); // stylelint-disable-line function-disallowed-list
   width: var(--#{variables.$prefix}tooltip-arrow-height);
   height: var(--#{variables.$prefix}tooltip-arrow-width);
 
   &::before {
     right: -1px;
-    border-width: calc(var(--#{variables.$prefix}tooltip-arrow-width) * 0.5)
+    border-width:
+      calc(var(--#{variables.$prefix}tooltip-arrow-width) * .5)
       var(--#{variables.$prefix}tooltip-arrow-height)
-      calc(var(--#{variables.$prefix}tooltip-arrow-width) * 0.5) 0; // stylelint-disable-line function-disallowed-list
+      calc(var(--#{variables.$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
     border-right-color: var(--#{variables.$prefix}tooltip-bg);
   }
 }
@@ -92,13 +96,15 @@
 /* rtl:end:ignore */
 
 .bs-tooltip-bottom .tooltip-arrow {
-  top: calc(
-    -1 * var(--#{variables.$prefix}tooltip-arrow-height)
-  ); // stylelint-disable-line function-disallowed-list
+  top:
+    calc(
+      -1 * var(--#{variables.$prefix}tooltip-arrow-height)
+    ); // stylelint-disable-line function-disallowed-list
 
   &::before {
     bottom: -1px;
-    border-width: 0 calc(var(--#{variables.$prefix}tooltip-arrow-width) * 0.5)
+    border-width:
+      0 calc(var(--#{variables.$prefix}tooltip-arrow-width) * .5)
       var(--#{variables.$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
     border-bottom-color: var(--#{variables.$prefix}tooltip-bg);
   }
@@ -106,16 +112,18 @@
 
 /* rtl:begin:ignore */
 .bs-tooltip-start .tooltip-arrow {
-  right: calc(
-    -1 * var(--#{variables.$prefix}tooltip-arrow-height)
-  ); // stylelint-disable-line function-disallowed-list
+  right:
+    calc(
+      -1 * var(--#{variables.$prefix}tooltip-arrow-height)
+    ); // stylelint-disable-line function-disallowed-list
   width: var(--#{variables.$prefix}tooltip-arrow-height);
   height: var(--#{variables.$prefix}tooltip-arrow-width);
 
   &::before {
     left: -1px;
-    border-width: calc(var(--#{variables.$prefix}tooltip-arrow-width) * 0.5) 0
-      calc(var(--#{variables.$prefix}tooltip-arrow-width) * 0.5)
+    border-width:
+      calc(var(--#{variables.$prefix}tooltip-arrow-width) * .5) 0
+      calc(var(--#{variables.$prefix}tooltip-arrow-width) * .5)
       var(--#{variables.$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
     border-left-color: var(--#{variables.$prefix}tooltip-bg);
   }
@@ -141,7 +149,8 @@
 // Wrapper for the tooltip content
 .tooltip-inner {
   max-width: var(--#{variables.$prefix}tooltip-max-width);
-  padding: var(--#{variables.$prefix}tooltip-padding-y)
+  padding:
+    var(--#{variables.$prefix}tooltip-padding-y)
     var(--#{variables.$prefix}tooltip-padding-x);
   color: var(--#{variables.$prefix}tooltip-color);
   text-align: center;

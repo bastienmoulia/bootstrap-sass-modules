@@ -13,10 +13,11 @@
 
 .form-range {
   width: 100%;
-  height: functions.add(
-    variables.$form-range-thumb-height,
-    variables.$form-range-thumb-focus-box-shadow-width * 2
-  );
+  height:
+    functions.add(
+      variables.$form-range-thumb-height,
+      variables.$form-range-thumb-focus-box-shadow-width * 2
+    );
   padding: 0; // Need to reset padding
   appearance: none;
   background-color: transparent;
@@ -41,9 +42,10 @@
   &::-webkit-slider-thumb {
     width: variables.$form-range-thumb-width;
     height: variables.$form-range-thumb-height;
-    margin-top: (
+    margin-top:
+      (
         variables.$form-range-track-height - variables.$form-range-thumb-height
-      ) * 0.5; // Webkit specific
+      ) * .5; // Webkit specific
     appearance: none;
     @include gradients.gradient-bg(variables.$form-range-thumb-bg);
     border: variables.$form-range-thumb-border;

@@ -17,8 +17,7 @@
     @each $key, $utility in utilities.$utilities {
       // The utility can be disabled with `false`, thus check if the utility is a map first
       // Only proceed if responsive media queries are enabled or if it's the base media query
-      @if type-of($utility) ==
-        "map" and
+      @if type-of($utility) == "map" and
         (map-get($utility, responsive) or $infix == "")
       {
         @include mixins-utilities.generate-utility($utility, $infix);
@@ -42,8 +41,7 @@
       @each $key, $utility in utilities.$utilities {
         // The utility can be disabled with `false`, thus check if the utility is a map first
         // Only proceed if responsive media queries are enabled or if it's the base media query
-        @if type-of($utility) ==
-          "map" and
+        @if type-of($utility) == "map" and
           map-get($utility, rfs) and
           (map-get($utility, responsive) or $infix == "")
         {

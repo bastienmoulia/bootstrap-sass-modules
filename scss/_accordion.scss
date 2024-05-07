@@ -24,14 +24,14 @@
   --#{variables.$prefix}accordion-btn-color: #{variables.$accordion-button-color};
   --#{variables.$prefix}accordion-btn-bg: #{variables.$accordion-button-bg};
   --#{variables.$prefix}accordion-btn-icon: #{escape-svg.escape-svg(
-      variables.$accordion-button-icon
-    )};
+    variables.$accordion-button-icon
+  )};
   --#{variables.$prefix}accordion-btn-icon-width: #{variables.$accordion-icon-width};
   --#{variables.$prefix}accordion-btn-icon-transform: #{variables.$accordion-icon-transform};
   --#{variables.$prefix}accordion-btn-icon-transition: #{variables.$accordion-icon-transition};
   --#{variables.$prefix}accordion-btn-active-icon: #{escape-svg.escape-svg(
-      variables.$accordion-button-active-icon
-    )};
+    variables.$accordion-button-active-icon
+  )};
   --#{variables.$prefix}accordion-btn-focus-box-shadow: #{variables.$accordion-button-focus-box-shadow};
   --#{variables.$prefix}accordion-body-padding-x: #{variables.$accordion-body-padding-x};
   --#{variables.$prefix}accordion-body-padding-y: #{variables.$accordion-body-padding-y};
@@ -45,7 +45,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--#{variables.$prefix}accordion-btn-padding-y)
+  padding:
+    var(--#{variables.$prefix}accordion-btn-padding-y)
     var(--#{variables.$prefix}accordion-btn-padding-x);
   @include rfs.font-size(variables.$font-size-base);
   color: var(--#{variables.$prefix}accordion-btn-color);
@@ -61,7 +62,8 @@
   &:not(.collapsed) {
     color: var(--#{variables.$prefix}accordion-active-color);
     background-color: var(--#{variables.$prefix}accordion-active-bg);
-    box-shadow: inset 0
+    box-shadow:
+      inset 0
       calc(-1 * var(--#{variables.$prefix}accordion-border-width)) 0
       var(--#{variables.$prefix}accordion-border-color); // stylelint-disable-line function-disallowed-list
 
@@ -104,7 +106,8 @@
 .accordion-item {
   color: var(--#{variables.$prefix}accordion-color);
   background-color: var(--#{variables.$prefix}accordion-bg);
-  border: var(--#{variables.$prefix}accordion-border-width) solid
+  border:
+    var(--#{variables.$prefix}accordion-border-width) solid
     var(--#{variables.$prefix}accordion-border-color);
 
   &:first-of-type {
@@ -146,7 +149,8 @@
 }
 
 .accordion-body {
-  padding: var(--#{variables.$prefix}accordion-body-padding-y)
+  padding:
+    var(--#{variables.$prefix}accordion-body-padding-y)
     var(--#{variables.$prefix}accordion-body-padding-x);
 }
 
@@ -181,11 +185,11 @@
   @include color-mode.color-mode(dark) {
     .accordion-button::after {
       --#{variables.$prefix}accordion-btn-icon: #{escape-svg.escape-svg(
-          variables-dark.$accordion-button-icon-dark
-        )};
+        variables-dark.$accordion-button-icon-dark
+      )};
       --#{variables.$prefix}accordion-btn-active-icon: #{escape-svg.escape-svg(
-          variables-dark.$accordion-button-active-icon-dark
-        )};
+        variables-dark.$accordion-button-active-icon-dark
+      )};
     }
   }
 }

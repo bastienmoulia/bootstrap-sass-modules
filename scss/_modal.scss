@@ -108,7 +108,8 @@
   pointer-events: auto;
   background-color: var(--#{variables.$prefix}modal-bg);
   background-clip: padding-box;
-  border: var(--#{variables.$prefix}modal-border-width) solid
+  border:
+    var(--#{variables.$prefix}modal-border-width) solid
     var(--#{variables.$prefix}modal-border-color);
   @include border-radius.border-radius(
     var(--#{variables.$prefix}modal-border-radius)
@@ -140,18 +141,21 @@
   flex-shrink: 0;
   align-items: center;
   padding: var(--#{variables.$prefix}modal-header-padding);
-  border-bottom: var(--#{variables.$prefix}modal-header-border-width) solid
+  border-bottom:
+    var(--#{variables.$prefix}modal-header-border-width) solid
     var(--#{variables.$prefix}modal-header-border-color);
   @include border-radius.border-top-radius(
     var(--#{variables.$prefix}modal-inner-border-radius)
   );
 
   .btn-close {
-    padding: calc(var(--#{variables.$prefix}modal-header-padding-y) * 0.5)
-      calc(var(--#{variables.$prefix}modal-header-padding-x) * 0.5);
-    margin: calc(-0.5 * var(--#{variables.$prefix}modal-header-padding-y))
-      calc(-0.5 * var(--#{variables.$prefix}modal-header-padding-x))
-      calc(-0.5 * var(--#{variables.$prefix}modal-header-padding-y)) auto;
+    padding:
+      calc(var(--#{variables.$prefix}modal-header-padding-y) * .5)
+      calc(var(--#{variables.$prefix}modal-header-padding-x) * .5);
+    margin:
+      calc(-.5 * var(--#{variables.$prefix}modal-header-padding-y))
+      calc(-.5 * var(--#{variables.$prefix}modal-header-padding-x))
+      calc(-.5 * var(--#{variables.$prefix}modal-header-padding-y)) auto;
   }
 }
 
@@ -178,12 +182,14 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: calc(
-    var(--#{variables.$prefix}modal-padding) -
-      var(--#{variables.$prefix}modal-footer-gap) * 0.5
-  );
+  padding:
+    calc(
+      var(--#{variables.$prefix}modal-padding) -
+      var(--#{variables.$prefix}modal-footer-gap) * .5
+    );
   background-color: var(--#{variables.$prefix}modal-footer-bg);
-  border-top: var(--#{variables.$prefix}modal-footer-border-width) solid
+  border-top:
+    var(--#{variables.$prefix}modal-footer-border-width) solid
     var(--#{variables.$prefix}modal-footer-border-color);
   @include border-radius.border-bottom-radius(
     var(--#{variables.$prefix}modal-inner-border-radius)
@@ -193,9 +199,10 @@
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
   > * {
-    margin: calc(
-      var(--#{variables.$prefix}modal-footer-gap) * 0.5
-    ); // Todo in v6: replace with gap on parent class
+    margin:
+      calc(
+        var(--#{variables.$prefix}modal-footer-gap) * .5
+      ); // Todo in v6: replace with gap on parent class
   }
 }
 

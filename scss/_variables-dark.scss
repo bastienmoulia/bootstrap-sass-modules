@@ -85,9 +85,9 @@ $dark-border-subtle-dark: variables.$gray-800 !default;
 
 $body-color-dark: variables.$gray-300 !default;
 $body-bg-dark: variables.$gray-900 !default;
-$body-secondary-color-dark: rgba($body-color-dark, 0.75) !default;
+$body-secondary-color-dark: rgba($body-color-dark, .75) !default;
 $body-secondary-bg-dark: variables.$gray-800 !default;
-$body-tertiary-color-dark: rgba($body-color-dark, 0.5) !default;
+$body-tertiary-color-dark: rgba($body-color-dark, .5) !default;
 $body-tertiary-bg-dark: mix(
   variables.$gray-800,
   variables.$gray-900,
@@ -95,7 +95,7 @@ $body-tertiary-bg-dark: mix(
 ) !default;
 $body-emphasis-color-dark: variables.$white !default;
 $border-color-dark: variables.$gray-700 !default;
-$border-color-translucent-dark: rgba(variables.$white, 0.15) !default;
+$border-color-translucent-dark: rgba(variables.$white, .15) !default;
 $headings-color-dark: inherit !default;
 $link-color-dark: functions.tint-color(variables.$primary, 40%) !default;
 $link-hover-color-dark: functions.shift-color(
@@ -113,7 +113,7 @@ $mark-bg-dark: variables.$yellow-800 !default;
 $form-select-indicator-color-dark: $body-color-dark !default;
 $form-select-indicator-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
 
-$form-switch-color-dark: rgba(variables.$white, 0.25) !default;
+$form-switch-color-dark: rgba(variables.$white, .25) !default;
 $form-switch-bg-image-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color-dark}'/></svg>") !default;
 
 // scss-docs-start form-validation-colors-dark
