@@ -2,19 +2,19 @@
 @import "../../variables";
 @import "../../variables-dark";
 @import "../../maps";
-@import "../../mixins";
+@import "../../mixins/color-mode";
 
 @include describe("global $color-mode-type: data") {
   @include it("generates data attribute selectors for dark mode") {
     @include assert() {
       @include output() {
-        @include color-mode.color-mode(dark) {
+        @include color-mode(dark) {
           .element {
             color: var(--bs-primary-text-emphasis);
             background-color: var(--bs-primary-bg-subtle);
           }
         }
-        @include color-mode.color-mode(dark, true) {
+        @include color-mode(dark, true) {
           --custom-color: #{mix($indigo, $blue, 50%)};
         }
       }
@@ -37,13 +37,13 @@
 
     @include assert() {
       @include output() {
-        @include color-mode.color-mode(dark) {
+        @include color-mode(dark) {
           .element {
             color: var(--bs-primary-text-emphasis);
             background-color: var(--bs-primary-bg-subtle);
           }
         }
-        @include color-mode.color-mode(dark, true) {
+        @include color-mode(dark, true) {
           --custom-color: #{mix($indigo, $blue, 50%)};
         }
       }
