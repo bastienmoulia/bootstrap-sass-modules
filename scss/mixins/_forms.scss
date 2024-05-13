@@ -26,15 +26,14 @@
   $state,
   $color,
   $icon,
-  $tooltip-color:
-    functions.color-contrast(
-      $color,
-      variables.$color-contrast-dark,
-      variables.$color-contrast-light,
-      variables.$min-contrast-ratio,
-      variables.$white,
-      variables.$black
-    ),
+  $tooltip-color: functions.color-contrast(
+    $color,
+    variables.$color-contrast-dark,
+    variables.$color-contrast-light,
+    variables.$min-contrast-ratio,
+    variables.$white,
+    variables.$black
+  ),
   $tooltip-bg-color: rgba($color, variables.$form-feedback-tooltip-opacity),
   $focus-box-shadow: 0 0 variables.$input-btn-focus-blur variables.$input-focus-width rgba($color, variables.$input-btn-focus-color-opacity),
   $border-color: $color
@@ -116,9 +115,7 @@
       @if variables.$enable-validation-icons {
         &:not([multiple]):not([size]),
         &:not([multiple])[size="1"] {
-          --#{variables.$prefix}form-select-bg-icon: #{escape-svg.escape-svg(
-              $icon
-            )};
+          --#{variables.$prefix}form-select-bg-icon: #{escape-svg.escape-svg($icon)};
           padding-right: variables.$form-select-feedback-icon-padding-end;
           background-position: variables.$form-select-bg-position, variables.$form-select-feedback-icon-position;
           background-size: variables.$form-select-bg-size, variables.$form-select-feedback-icon-size;
@@ -143,11 +140,7 @@
   .form-control-color {
     @include form-validation-state-selector($state) {
       @if variables.$enable-validation-icons {
-        width:
-          functions.add(
-          variables.$form-color-width,
-          variables.$input-height-inner
-        );
+        width: functions.add(variables.$form-color-width, variables.$input-height-inner);
       }
     }
   }
