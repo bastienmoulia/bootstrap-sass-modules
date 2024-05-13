@@ -1,6 +1,7 @@
 @use "../functions";
 @use "../variables";
 @use "../mixins/border-radius";
+@use "../mixins/box-shadow";
 @use "../mixins/escape-svg";
 @use "../vendor/rfs";
 
@@ -26,16 +27,16 @@
   $color,
   $icon,
   $tooltip-color:
-  functions.color-contrast(
-    $color,
-    variables.$color-contrast-dark,
-    variables.$color-contrast-light,
-    variables.$min-contrast-ratio,
-    variables.$white,
-    variables.$black
-  ),
+    functions.color-contrast(
+      $color,
+      variables.$color-contrast-dark,
+      variables.$color-contrast-light,
+      variables.$min-contrast-ratio,
+      variables.$white,
+      variables.$black
+    ),
   $tooltip-bg-color: rgba($color, variables.$form-feedback-tooltip-opacity),
-  $focus-box-shadow: 0 0 variables.$input-btn-focus-blur variables.$input-focus-widthrgba($color, variables.$input-btn-focus-color-opacity),
+  $focus-box-shadow: 0 0 variables.$input-btn-focus-blur variables.$input-focus-width rgba($color, variables.$input-btn-focus-color-opacity),
   $border-color: $color
 ) {
   .#{$state}-feedback {
@@ -53,9 +54,7 @@
     z-index: 5;
     display: none;
     max-width: 100%; // Contain to parent when possible
-    padding:
-      variables.$form-feedback-tooltip-padding-y
-      variables.$form-feedback-tooltip-padding-x;
+    padding: variables.$form-feedback-tooltip-padding-y variables.$form-feedback-tooltip-padding-x;
     margin-top: .1rem;
     @include rfs.font-size(variables.$form-feedback-tooltip-font-size);
     line-height: variables.$form-feedback-tooltip-line-height;
@@ -82,9 +81,7 @@
         background-image: escape-svg.escape-svg($icon);
         background-repeat: no-repeat;
         background-position: right variables.$input-height-inner-quarter center;
-        background-size:
-          variables.$input-height-inner-half
-          variables.$input-height-inner-half;
+        background-size: variables.$input-height-inner-half variables.$input-height-inner-half;
       }
 
       &:focus {
@@ -107,11 +104,7 @@
     @include form-validation-state-selector($state) {
       @if variables.$enable-validation-icons {
         padding-right: variables.$input-height-inner;
-        background-position:
-          top
-          variables.$input-height-inner-quarter
-          right
-          variables.$input-height-inner-quarter;
+        background-position: top variables.$input-height-inner-quarter right variables.$input-height-inner-quarter;
       }
     }
   }
@@ -124,8 +117,8 @@
         &:not([multiple]):not([size]),
         &:not([multiple])[size="1"] {
           --#{variables.$prefix}form-select-bg-icon: #{escape-svg.escape-svg(
-            $icon
-          )};
+              $icon
+            )};
           padding-right: variables.$form-select-feedback-icon-padding-end;
           background-position: variables.$form-select-bg-position, variables.$form-select-feedback-icon-position;
           background-size: variables.$form-select-bg-size, variables.$form-select-feedback-icon-size;
@@ -152,9 +145,9 @@
       @if variables.$enable-validation-icons {
         width:
           functions.add(
-            variables.$form-color-width,
-            variables.$input-height-inner
-          );
+          variables.$form-color-width,
+          variables.$input-height-inner
+        );
       }
     }
   }
