@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-sass-modules",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Bootstrap with SASS Modules",
   "sass": "scss/bootstrap.scss",
   "style": "dist/bootstrap.css",
