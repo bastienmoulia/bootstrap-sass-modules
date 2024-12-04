@@ -6,7 +6,7 @@ const { runSass } = require('sass-true')
 
 module.exports = (filename, { describe, it }) => {
   const data = fs.readFileSync(filename, 'utf8')
-  const TRUE_SETUP = '$true-terminal-output: false; @import "true";'
+  const TRUE_SETUP = '$true-terminal-output: false; @use "sass:color"; @import "true";'
   const sassString = TRUE_SETUP + data
 
   runSass(

@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "variables";
 @use "mixins/border-radius";
 @use "mixins/box-shadow";
@@ -115,8 +116,12 @@
   );
   --#{variables.$prefix}nav-link-font-weight: #{variables.$nav-link-font-weight};
   --#{variables.$prefix}nav-link-color: var(--#{variables.$prefix}navbar-color);
-  --#{variables.$prefix}nav-link-hover-color: var(--#{variables.$prefix}navbar-hover-color);
-  --#{variables.$prefix}nav-link-disabled-color: var(--#{variables.$prefix}navbar-disabled-color);
+  --#{variables.$prefix}nav-link-hover-color: var(
+    --#{variables.$prefix}navbar-hover-color
+  );
+  --#{variables.$prefix}nav-link-disabled-color: var(
+    --#{variables.$prefix}navbar-disabled-color
+  );
   // scss-docs-end navbar-nav-css-vars
 
   display: flex;
@@ -162,8 +167,8 @@
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
 .navbar-collapse {
-  flex-basis: 100%;
   flex-grow: 1;
+  flex-basis: 100%;
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
@@ -221,7 +226,7 @@
 // Generate series of `.navbar-expand-*` responsive classes for configuring
 // where your navbar collapses.
 .navbar-expand {
-  @each $breakpoint in map-keys(variables.$grid-breakpoints) {
+  @each $breakpoint in map.keys(variables.$grid-breakpoints) {
     $next: breakpoints.breakpoint-next(
       $breakpoint,
       variables.$grid-breakpoints

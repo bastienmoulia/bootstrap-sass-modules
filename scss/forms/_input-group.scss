@@ -1,3 +1,5 @@
+@use "sass:string";
+@use "sass:map";
 @use "../variables";
 @use "../mixins/border-radius";
 @use "../vendor/rfs";
@@ -91,7 +93,9 @@
 
 .input-group-lg > .form-select,
 .input-group-sm > .form-select {
-  padding-right: variables.$form-select-padding-x + variables.$form-select-indicator-padding;
+  padding-right:
+    variables.$form-select-padding-x +
+    variables.$form-select-indicator-padding;
 }
 
 // Rounded corners
@@ -123,12 +127,18 @@
   }
 
   $validation-messages: "";
-  @each $state in map-keys(variables.$form-validation-states) {
-    $validation-messages: $validation-messages + ":not(." + unquote($state) + "-tooltip)" + ":not(." + unquote($state) + "-feedback)";
+  @each $state in map.keys(variables.$form-validation-states) {
+    $validation-messages: $validation-messages +
+      ":not(." +
+      string.unquote($state) +
+      "-tooltip)" +
+      ":not(." +
+      string.unquote($state) +
+      "-feedback)";
   }
 
   > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
-    margin-left: calc(#{variables.$input-border-width} * -1); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(#{variables.$input-border-width} * -1);
     @include border-radius.border-start-radius(0);
   }
 

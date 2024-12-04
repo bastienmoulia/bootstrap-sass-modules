@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "functions";
 @use "variables";
 @use "variables-dark";
@@ -108,7 +109,7 @@ $utilities-colors: $theme-colors-rgb !default;
 // scss-docs-end utilities-colors
 
 // scss-docs-start utilities-text-colors
-$utilities-text: map-merge(
+$utilities-text: map.merge(
   $utilities-colors,
   (
     "black": functions.to-rgb(variables.$black),
@@ -137,7 +138,7 @@ $utilities-text-emphasis-colors: (
 // scss-docs-end utilities-text-colors
 
 // scss-docs-start utilities-bg-colors
-$utilities-bg: map-merge(
+$utilities-bg: map.merge(
   $utilities-colors,
   (
     "black": functions.to-rgb(variables.$black),
@@ -166,7 +167,7 @@ $utilities-bg-subtle: (
 // scss-docs-end utilities-bg-colors
 
 // scss-docs-start utilities-border-colors
-$utilities-border: map-merge(
+$utilities-border: map.merge(
   $utilities-colors,
   (
     "black": functions.to-rgb(variables.$black),

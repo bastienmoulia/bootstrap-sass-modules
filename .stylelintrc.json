@@ -1,22 +1,16 @@
 {
-  "extends": [
-    "stylelint-config-twbs-bootstrap"
-  ],
+  "extends": ["stylelint-config-twbs-bootstrap"],
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
   "overrides": [
     {
-      "files": "**/*.scss",
+      "files": ["**/*.scss"],
       "rules": {
         "declaration-property-value-disallowed-list": {
           "border": "none",
           "outline": "none"
         },
-        "function-disallowed-list": [
-          "calc",
-          "lighten",
-          "darken"
-        ],
+        "function-disallowed-list": ["lighten", "darken"],
         "property-disallowed-list": [
           "border-radius",
           "border-top-left-radius",
@@ -31,29 +25,15 @@
             "ignore": "local"
           }
         ],
-        "scss/selector-no-union-class-name": true
+        "scss/selector-no-union-class-name": true,
+        "scss/operator-no-newline-after": null
       }
     },
     {
-      "files": "scss/**/*.{test,spec}.scss",
+      "files": ["scss/**/*.{test,spec}.scss"],
       "rules": {
         "scss/dollar-variable-default": null,
         "declaration-no-important": null
-      }
-    },
-    {
-      "files": "site/**/*.scss",
-      "rules": {
-        "scss/dollar-variable-default": null
-      }
-    },
-    {
-      "files": "site/**/examples/**/*.css",
-      "rules": {
-        "comment-empty-line-before": null,
-        "property-no-vendor-prefix": null,
-        "selector-no-qualifying-type": null,
-        "value-no-vendor-prefix": null
       }
     }
   ]

@@ -88,7 +88,7 @@
     var(--#{variables.$prefix}nav-tabs-border-color);
 
   .nav-link {
-    margin-bottom: calc(-1 * var(--#{variables.$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
+    margin-bottom: calc(-1 * var(--#{variables.$prefix}nav-tabs-border-width));
     border: var(--#{variables.$prefix}nav-tabs-border-width) solid transparent;
     @include border-radius.border-top-radius(
       var(--#{variables.$prefix}nav-tabs-border-radius)
@@ -111,7 +111,7 @@
 
   .dropdown-menu {
     // Make dropdown border overlap tab border
-    margin-top: calc(-1 * var(--#{variables.$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
+    margin-top: calc(-1 * var(--#{variables.$prefix}nav-tabs-border-width));
     // Remove the top rounded corners here since there is a hard edge above the menu
     @include border-radius.border-top-radius(0);
   }
@@ -192,8 +192,8 @@
 .nav-justified {
   > .nav-link,
   .nav-item {
-    flex-basis: 0;
     flex-grow: 1;
+    flex-basis: 0;
     text-align: center;
   }
 }
