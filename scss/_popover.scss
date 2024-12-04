@@ -31,7 +31,9 @@
   --#{variables.$prefix}popover-body-color: #{variables.$popover-body-color};
   --#{variables.$prefix}popover-arrow-width: #{variables.$popover-arrow-width};
   --#{variables.$prefix}popover-arrow-height: #{variables.$popover-arrow-height};
-  --#{variables.$prefix}popover-arrow-border: var(--#{variables.$prefix}popover-border-color);
+  --#{variables.$prefix}popover-arrow-border: var(
+    --#{variables.$prefix}popover-border-color
+  );
   // scss-docs-end popover-css-vars
 
   z-index: var(--#{variables.$prefix}popover-zindex);
@@ -72,13 +74,16 @@
 
 .bs-popover-top {
   > .popover-arrow {
-    bottom: calc(-1 * (var(--#{variables.$prefix}popover-arrow-height)) - var(--#{variables.$prefix}popover-border-width)); // stylelint-disable-line function-disallowed-list
+    bottom:
+      calc(
+        -1 * (var(--#{variables.$prefix}popover-arrow-height)) - var(--#{variables.$prefix}popover-border-width)
+      );
 
     &::before,
     &::after {
       border-width:
         var(--#{variables.$prefix}popover-arrow-height)
-        calc(var(--#{variables.$prefix}popover-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
+        calc(var(--#{variables.$prefix}popover-arrow-width) * .5) 0;
     }
 
     &::before {
@@ -96,13 +101,19 @@
 /* rtl:begin:ignore */
 .bs-popover-end {
   > .popover-arrow {
-    left: calc(-1 * (var(--#{variables.$prefix}popover-arrow-height)) - var(--#{variables.$prefix}popover-border-width)); // stylelint-disable-line function-disallowed-list
+    left:
+      calc(
+        -1 * (var(--#{variables.$prefix}popover-arrow-height)) - var(--#{variables.$prefix}popover-border-width)
+      );
     width: var(--#{variables.$prefix}popover-arrow-height);
     height: var(--#{variables.$prefix}popover-arrow-width);
 
     &::before,
     &::after {
-      border-width: calc(var(--#{variables.$prefix}popover-arrow-width) * .5) var(--#{variables.$prefix}popover-arrow-height) calc(var(--#{variables.$prefix}popover-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
+      border-width:
+        calc(var(--#{variables.$prefix}popover-arrow-width) * .5)
+        var(--#{variables.$prefix}popover-arrow-height)
+        calc(var(--#{variables.$prefix}popover-arrow-width) * .5) 0;
     }
 
     &::before {
@@ -121,11 +132,16 @@
 
 .bs-popover-bottom {
   > .popover-arrow {
-    top: calc(-1 * (var(--#{variables.$prefix}popover-arrow-height)) - var(--#{variables.$prefix}popover-border-width)); // stylelint-disable-line function-disallowed-list
+    top:
+      calc(
+        -1 * (var(--#{variables.$prefix}popover-arrow-height)) - var(--#{variables.$prefix}popover-border-width)
+      );
 
     &::before,
     &::after {
-      border-width: 0 calc(var(--#{variables.$prefix}popover-arrow-width) * .5) var(--#{variables.$prefix}popover-arrow-height); // stylelint-disable-line function-disallowed-list
+      border-width:
+        0 calc(var(--#{variables.$prefix}popover-arrow-width) * .5)
+        var(--#{variables.$prefix}popover-arrow-height);
     }
 
     &::before {
@@ -146,7 +162,7 @@
     left: 50%;
     display: block;
     width: var(--#{variables.$prefix}popover-arrow-width);
-    margin-left: calc(-.5 * var(--#{variables.$prefix}popover-arrow-width)); // stylelint-disable-line function-disallowed-list
+    margin-left: calc(-.5 * var(--#{variables.$prefix}popover-arrow-width));
     content: "";
     border-bottom:
       var(--#{variables.$prefix}popover-border-width) solid
@@ -157,13 +173,19 @@
 /* rtl:begin:ignore */
 .bs-popover-start {
   > .popover-arrow {
-    right: calc(-1 * (var(--#{variables.$prefix}popover-arrow-height)) - var(--#{variables.$prefix}popover-border-width)); // stylelint-disable-line function-disallowed-list
+    right:
+      calc(
+        -1 * (var(--#{variables.$prefix}popover-arrow-height)) - var(--#{variables.$prefix}popover-border-width)
+      );
     width: var(--#{variables.$prefix}popover-arrow-height);
     height: var(--#{variables.$prefix}popover-arrow-width);
 
     &::before,
     &::after {
-      border-width: calc(var(--#{variables.$prefix}popover-arrow-width) * .5) 0 calc(var(--#{variables.$prefix}popover-arrow-width) * .5) var(--#{variables.$prefix}popover-arrow-height); // stylelint-disable-line function-disallowed-list
+      border-width:
+        calc(var(--#{variables.$prefix}popover-arrow-width) * .5) 0
+        calc(var(--#{variables.$prefix}popover-arrow-width) * .5)
+        var(--#{variables.$prefix}popover-arrow-height);
     }
 
     &::before {

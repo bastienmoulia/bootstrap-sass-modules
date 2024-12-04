@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "functions";
 @use "variables";
 @use "maps";
@@ -6,16 +7,14 @@
 
 $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$utilities: map-merge(
+$utilities: map.merge(
   (
-    "align":
-    (
+    "align": (
       property: vertical-align,
       class: align,
       values: baseline top middle bottom text-bottom text-top,
     ),
-    "float":
-    (
+    "float": (
       responsive: true,
       property: float,
       values: (
@@ -24,8 +23,7 @@ $utilities: map-merge(
         none: none,
       ),
     ),
-    "object-fit":
-    (
+    "object-fit": (
       responsive: true,
       property: object-fit,
       values: (
@@ -36,8 +34,7 @@ $utilities: map-merge(
         none: none,
       ),
     ),
-    "opacity":
-    (
+    "opacity": (
       property: opacity,
       values: (
         0: 0,
@@ -47,8 +44,7 @@ $utilities: map-merge(
         100: 1,
       ),
     ),
-    "overflow":
-    (
+    "overflow": (
       property: overflow,
       values: auto hidden visible scroll,
     ),
@@ -60,8 +56,7 @@ $utilities: map-merge(
       property: overflow-y,
       values: auto hidden visible scroll,
     ),
-    "display":
-    (
+    "display": (
       responsive: true,
       print: true,
       property: display,
@@ -69,8 +64,7 @@ $utilities: map-merge(
       values: inline inline-block block grid inline-grid table table-row
       table-cell flex inline-flex none,
     ),
-    "shadow":
-    (
+    "shadow": (
       property: box-shadow,
       class: shadow,
       values: (
@@ -80,8 +74,7 @@ $utilities: map-merge(
         none: none,
       ),
     ),
-    "focus-ring":
-    (
+    "focus-ring": (
       css-var: true,
       css-variable-name: focus-ring-color,
       class: focus-ring,
@@ -94,8 +87,7 @@ $utilities: map-merge(
         variables.$prefix
       ),
     ),
-    "position":
-    (
+    "position": (
       property: position,
       values: static relative absolute fixed sticky,
     ),
@@ -126,8 +118,7 @@ $utilities: map-merge(
         y: translateY(-50%),
       ),
     ),
-    "border":
-    (
+    "border": (
       property: border,
       values: (
         null: var(--#{variables.$prefix}border-width)
@@ -203,8 +194,7 @@ $utilities: map-merge(
         100: 1,
       ),
     ),
-    "width":
-    (
+    "width": (
       property: width,
       class: w,
       values: (
@@ -268,8 +258,7 @@ $utilities: map-merge(
         100: 100vh,
       ),
     ),
-    "flex":
-    (
+    "flex": (
       responsive: true,
       property: flex,
       values: (
@@ -367,13 +356,12 @@ $utilities: map-merge(
         last: 6,
       ),
     ),
-    "margin":
-    (
+    "margin": (
       responsive: true,
       property: margin,
       class: m,
       values:
-      map-merge(
+      map.merge(
         variables.$spacers,
         (
           auto: auto,
@@ -385,7 +373,7 @@ $utilities: map-merge(
       property: margin-right margin-left,
       class: mx,
       values:
-      map-merge(
+      map.merge(
         variables.$spacers,
         (
           auto: auto,
@@ -397,7 +385,7 @@ $utilities: map-merge(
       property: margin-top margin-bottom,
       class: my,
       values:
-      map-merge(
+      map.merge(
         variables.$spacers,
         (
           auto: auto,
@@ -409,7 +397,7 @@ $utilities: map-merge(
       property: margin-top,
       class: mt,
       values:
-      map-merge(
+      map.merge(
         variables.$spacers,
         (
           auto: auto,
@@ -421,7 +409,7 @@ $utilities: map-merge(
       property: margin-right,
       class: me,
       values:
-      map-merge(
+      map.merge(
         variables.$spacers,
         (
           auto: auto,
@@ -433,7 +421,7 @@ $utilities: map-merge(
       property: margin-bottom,
       class: mb,
       values:
-      map-merge(
+      map.merge(
         variables.$spacers,
         (
           auto: auto,
@@ -445,15 +433,14 @@ $utilities: map-merge(
       property: margin-left,
       class: ms,
       values:
-      map-merge(
+      map.merge(
         variables.$spacers,
         (
           auto: auto,
         )
       ),
     ),
-    "negative-margin":
-    (
+    "negative-margin": (
       responsive: true,
       property: margin,
       class: m,
@@ -495,8 +482,7 @@ $utilities: map-merge(
       class: ms,
       values: maps.$negative-spacers,
     ),
-    "padding":
-    (
+    "padding": (
       responsive: true,
       property: padding,
       class: p,
@@ -538,8 +524,7 @@ $utilities: map-merge(
       class: ps,
       values: variables.$spacers,
     ),
-    "gap":
-    (
+    "gap": (
       responsive: true,
       property: gap,
       class: gap,
@@ -557,8 +542,7 @@ $utilities: map-merge(
       class: column-gap,
       values: variables.$spacers,
     ),
-    "font-family":
-    (
+    "font-family": (
       property: font-family,
       class: font,
       values: (
@@ -634,15 +618,14 @@ $utilities: map-merge(
       ),
       rtl: false,
     ),
-    "color":
-    (
+    "color": (
       property: color,
       class: text,
       local-vars: (
         "text-opacity": 1,
       ),
       values:
-      map-merge(
+      map.merge(
         maps.$utilities-text-colors,
         (
           "muted": var(--#{variables.$prefix}secondary-color),
@@ -670,8 +653,7 @@ $utilities: map-merge(
       class: text,
       values: maps.$utilities-text-emphasis-colors,
     ),
-    "link-opacity":
-    (
+    "link-opacity": (
       css-var: true,
       class: link-opacity,
       state: hover,
@@ -700,11 +682,14 @@ $utilities: map-merge(
         "link-underline-opacity": 1,
       ),
       values:
-      map-merge(
+      map.merge(
         maps.$utilities-links-underline,
         (
           null:
-          rgba(var(--#{variables.$prefix}link-color-rgb), var(--#{variables.$prefix}link-underline-opacity, 1)),
+          rgba(
+            var(--#{variables.$prefix}link-color-rgb),
+            var(--#{variables.$prefix}link-underline-opacity, 1)
+          ),
         )
       ),
     ),
@@ -721,15 +706,14 @@ $utilities: map-merge(
         100: 1,
       ),
     ),
-    "background-color":
-    (
+    "background-color": (
       property: background-color,
       class: bg,
       local-vars: (
         "bg-opacity": 1,
       ),
       values:
-      map-merge(
+      map.merge(
         maps.$utilities-bg-colors,
         (
           "transparent": transparent,
@@ -762,16 +746,14 @@ $utilities: map-merge(
       class: bg,
       values: maps.$utilities-bg-subtle,
     ),
-    "gradient":
-    (
+    "gradient": (
       property: background-image,
       class: bg,
       values: (
         gradient: var(--#{variables.$prefix}gradient),
       ),
     ),
-    "user-select":
-    (
+    "user-select": (
       property: user-select,
       values: all auto none,
     ),
@@ -780,8 +762,7 @@ $utilities: map-merge(
       class: pe,
       values: none auto,
     ),
-    "rounded":
-    (
+    "rounded": (
       property: border-radius,
       class: rounded,
       values: (
@@ -856,8 +837,7 @@ $utilities: map-merge(
         pill: var(--#{variables.$prefix}border-radius-pill),
       ),
     ),
-    "visibility":
-    (
+    "visibility": (
       property: visibility,
       class: null,
       values: (
@@ -865,12 +845,11 @@ $utilities: map-merge(
         invisible: hidden,
       ),
     ),
-    "z-index":
-    (
+    "z-index": (
       property: z-index,
       class: z,
       values: variables.$zindex-levels,
-    )
+    ),
   ),
   $utilities
 );
