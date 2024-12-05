@@ -65,18 +65,10 @@
 // Generate contextual modifier classes for colorizing the alert
 @each $state in map.keys(variables.$theme-colors) {
   .alert-#{$state} {
-    --#{variables.$prefix}alert-color: var(
-      --#{variables.$prefix}#{$state}-text-emphasis
-    );
-    --#{variables.$prefix}alert-bg: var(
-      --#{variables.$prefix}#{$state}-bg-subtle
-    );
-    --#{variables.$prefix}alert-border-color: var(
-      --#{variables.$prefix}#{$state}-border-subtle
-    );
-    --#{variables.$prefix}alert-link-color: var(
-      --#{variables.$prefix}#{$state}-text-emphasis
-    );
+    --#{variables.$prefix}alert-color: var(--#{variables.$prefix}#{$state}-text-emphasis);
+    --#{variables.$prefix}alert-bg: var(--#{variables.$prefix}#{$state}-bg-subtle);
+    --#{variables.$prefix}alert-border-color: var(--#{variables.$prefix}#{$state}-border-subtle);
+    --#{variables.$prefix}alert-link-color: var(--#{variables.$prefix}#{$state}-text-emphasis);
   }
 }
 // scss-docs-end alert-modifiers

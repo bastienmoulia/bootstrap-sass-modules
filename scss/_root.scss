@@ -138,9 +138,7 @@
   --#{ variables.$prefix}border-radius-lg: #{variables.$border-radius-lg};
   --#{ variables.$prefix}border-radius-xl: #{variables.$border-radius-xl};
   --#{ variables.$prefix}border-radius-xxl: #{variables.$border-radius-xxl};
-  --#{ variables.$prefix}border-radius-2xl: var(
-    --#{variables.$prefix}border-radius-xxl
-  ); // Deprecated in v5.3.0 for consistency
+  --#{ variables.$prefix}border-radius-2xl: var(--#{variables.$prefix}border-radius-xxl); // Deprecated in v5.3.0 for consistency
   --#{ variables.$prefix}border-radius-pill: #{variables.$border-radius-pill};
   // scss-docs-end root-border-var
 

@@ -31,9 +31,7 @@
   --#{variables.$prefix}popover-body-color: #{variables.$popover-body-color};
   --#{variables.$prefix}popover-arrow-width: #{variables.$popover-arrow-width};
   --#{variables.$prefix}popover-arrow-height: #{variables.$popover-arrow-height};
-  --#{variables.$prefix}popover-arrow-border: var(
-    --#{variables.$prefix}popover-border-color
-  );
+  --#{variables.$prefix}popover-arrow-border: var(--#{variables.$prefix}popover-border-color);
   // scss-docs-end popover-css-vars
 
   z-index: var(--#{variables.$prefix}popover-zindex);
