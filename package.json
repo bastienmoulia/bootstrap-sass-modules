@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-sass-modules",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Bootstrap with SASS Modules",
   "homepage": "https://github.com/bastienmoulia/bootstrap-sass-modules",
   "main": "scss/bootstrap.scss",

@@ -2,14 +2,6 @@
   $bs-file: "Utilities"
 );
 
-// Configuration
-@use "functions";
-@use "variables";
-@use "variables-dark";
-@use "maps";
-@use "mixins";
-@use "utilities";
-
 // Layout & components
 @use "root";
 

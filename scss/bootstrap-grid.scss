@@ -5,16 +5,6 @@
 $include-column-box-sizing: true !default;
 
 @use "functions";
-@use "variables";
-@use "variables-dark";
-@use "maps";
-
-@use "mixins/breakpoints";
-@use "mixins/container";
-@use "mixins/grid" as mixins-grid;
-@use "mixins/utilities" as mixins-utilities;
-
-@use "vendor/rfs";
 
 @use "containers";
 @use "grid";
