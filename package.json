@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-sass-modules",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Bootstrap with SASS Modules",
   "sass": "scss/bootstrap.scss",
   "style": "dist/bootstrap.css",
@@ -41,5 +41,8 @@
     "shelljs": "^0.8.5",
     "stylelint": "^16.11.0",
     "stylelint-config-twbs-bootstrap": "^15.1.0"
+  },
+  "peerDependencies": {
+    "bootstrap": "^5.3.3"
   }
 }
